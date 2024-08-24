@@ -215,6 +215,7 @@ body.modal-open .mm-slideout {
 /* ================================================================ */
 .custonm_navbar {
   padding: 18px 0;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.16);
 }
 .custonm_navbar .logo_navbar {
   display: flex;
@@ -291,6 +292,17 @@ body.modal-open .mm-slideout {
   background-color: #b9b9b9;
   display: inline-flex;
   margin: 0 20px;
+}
+
+.login_navbar .wrapper {
+  justify-content: center !important;
+}
+.login_navbar .logo_navbar {
+  text-align: center;
+}
+.login_navbar .logo_navbar a {
+  display: inline-block;
+  margin: auto;
 }
 
 /* ================================================================ */
@@ -633,7 +645,7 @@ body.modal-open .mm-slideout {
   background-color: #f2f2f2;
   height: 50px;
   border-radius: 14px;
-  border: 1px solid #D5D5D5;
+  border: 1px solid #d5d5d5;
 }
 .custom_footer .subscripe .input-group .form-control {
   border: 0;
@@ -678,7 +690,8 @@ body.modal-open .mm-slideout {
 .copy_right {
   padding-bottom: 15px;
 }
-.copy_right h5, .copy_right a {
+.copy_right h5,
+.copy_right a {
   font-size: 0.9rem;
   font-weight: 700;
   color: #010d77;
@@ -690,6 +703,210 @@ body.modal-open .mm-slideout {
   background-color: #010d77;
   margin: 0 10px;
   display: inline-flex;
+}
+
+/* ================================================================ */
+.form_strip_page {
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+.form_strip_page h5 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #010d77;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.form_strip_page p {
+  color: #010d77;
+  text-align: center;
+}
+
+.form_style {
+  margin: auto;
+}
+.form_style .form-group {
+  margin-top: 25px;
+}
+.form_style label {
+  margin-bottom: 13px;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  color: #010d77;
+}
+.form_style .form-control {
+  height: 50px;
+  background-color: #f1f2ff;
+  border-radius: 14px;
+  padding-left: 25px;
+  border: 1px solid #d5d5d5;
+}
+.form_style .form-control::-moz-placeholder {
+  color: #010d77;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.form_style .form-control::placeholder {
+  color: #010d77;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.form_style .forget_pass {
+  text-align: right;
+  margin-top: 18px;
+}
+.form_style .forget_pass a {
+  font-size: 0.9rem;
+  color: #010d77;
+  text-decoration: underline;
+}
+.form_style .btn_submit {
+  margin-top: 37px;
+}
+.form_style .dont_account {
+  margin-top: 25px;
+  text-align: center;
+}
+.form_style .dont_account h6 {
+  font-size: 1.2rem;
+  color: #010d77;
+  font-weight: 400;
+}
+.form_style .dont_account h6 a {
+  font-weight: bold;
+  color: #010d77;
+}
+
+/* ================================================================ */
+.custom_breadcrumb {
+  padding: 40px 0;
+}
+.custom_breadcrumb h5 {
+  font-size: 1rem;
+  color: #010d77;
+  font-weight: 400;
+}
+.custom_breadcrumb h5 span {
+  font-weight: bold;
+}
+
+/* ================================================================ */
+.product_tools .category_slider_listing .category_card .card_icon {
+  width: 60px;
+  height: 60px;
+}
+.product_tools .category_slider_listing .category_card .card_icon img {
+  width: 50%;
+}
+.product_tools .head {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #010d77;
+}
+
+.product_list_and_filter {
+  margin-top: 45px;
+}
+.product_list_and_filter .left_side {
+  width: 20%;
+}
+.product_list_and_filter .right_side {
+  width: 80%;
+  padding-left: 20px;
+}
+.product_list_and_filter .right_side .product_card {
+  margin: 0 0;
+  margin-bottom: 23px;
+}
+
+.product_list_filter {
+  background-color: #f1f2ff;
+  padding: 21px 17px;
+}
+.product_list_filter h5 {
+  font-weight: 400;
+  color: #010d77;
+  font-size: 1.1rem;
+}
+.product_list_filter hr {
+  color: #010d77;
+  margin-bottom: 0;
+}
+.product_list_filter .accordion {
+  padding-top: 15px;
+  border-bottom: 1px solid #c7c9e5;
+  padding-bottom: 15px;
+}
+.product_list_filter .accordion .accordion-item {
+  background-color: transparent;
+  border: 0;
+}
+.product_list_filter .accordion .accordion-button {
+  background-color: transparent;
+  padding: 0;
+  font-weight: bold;
+  color: #010d77;
+}
+.product_list_filter .accordion .accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.product_list_filter .accordion .accordion-button:not(.collapsed) {
+  border: 0;
+  box-shadow: none !important;
+}
+.product_list_filter .accordion .accordion-body {
+  text-align: left;
+  padding: 0;
+  padding-top: 12px;
+  padding-left: 10px;
+}
+.product_list_filter .accordion .accordion-body .select_category_card_wrapper {
+  margin-top: 5px;
+}
+.product_list_filter .accordion .accordion-body .select_category_card_wrapper h6 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #010d77;
+}
+.product_list_filter .accordion .accordion-body .select_category_card_wrapper .select_category_card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.product_list_filter .accordion .accordion-body .select_category_card_wrapper .select_category_card input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+.product_list_filter .accordion .accordion-body .select_category_card_wrapper .select_category_card .select_box {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #929292;
+  border-radius: 2px;
+  position: relative;
+}
+.product_list_filter .accordion .accordion-body .select_category_card_wrapper .select_category_card .select_box .inner_sele {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 0;
+  border-radius: 2px;
+}
+.product_list_filter .accordion .accordion-body .select_category_card_wrapper .select_category_card span {
+  color: #010d77;
+  margin-left: 10px;
+  display: inline-flex;
+  font-size: 0.9rem;
+}
+.product_list_filter .accordion .accordion-body .select_category_card_wrapper input[type=checkbox]:checked ~ .select_box .inner_sele {
+  background-color: #010d77;
 }
 
 /* ================================================================ */

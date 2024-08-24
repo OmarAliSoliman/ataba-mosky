@@ -236,6 +236,7 @@ body.modal-open .mm-slideout {
 /* ================================================================ */
 .custonm_navbar {
   padding: 18px 0;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.16);
   .logo_navbar {
     // border: 1px solid #000;
     display: flex;
@@ -320,6 +321,18 @@ body.modal-open .mm-slideout {
         display: inline-flex;
         margin: 0 20px;
       }
+    }
+  }
+}
+.login_navbar {
+  .wrapper {
+    justify-content: center !important;
+  }
+  .logo_navbar {
+    text-align: center;
+    a {
+      display: inline-block;
+      margin: auto;
     }
   }
 }
@@ -701,7 +714,6 @@ body.modal-open .mm-slideout {
     img {
       margin-bottom: 20px;
     }
-   
   }
   .footer_links {
     h5 {
@@ -734,8 +746,8 @@ body.modal-open .mm-slideout {
       background-color: #f2f2f2;
       height: 50px;
       border-radius: 14px;
-    
-      border: 1px solid #D5D5D5;
+
+      border: 1px solid #d5d5d5;
       .form-control {
         border: 0;
         padding-left: 15px;
@@ -754,13 +766,13 @@ body.modal-open .mm-slideout {
         border: 0;
         width: 100px;
         text-align: center !important;
-        display:flex;
+        display: flex;
         align-items: center;
         justify-content: center;
       }
     }
   }
-  .social_phone{
+  .social_phone {
     ul {
       li {
         margin: 0 10px;
@@ -772,31 +784,237 @@ body.modal-open .mm-slideout {
         }
       }
     }
-    .phone{
+    .phone {
       font-weight: 600;
       font-size: 1.2rem;
-      a{
+      a {
         color: $mainColor;
       }
     }
   }
- 
 }
 
-.copy_right{
+.copy_right {
   padding-bottom: 15px;
-  h5, a{
-    font-size: .9rem;
+  h5,
+  a {
+    font-size: 0.9rem;
     font-weight: 700;
     color: $mainColor;
     margin: 0;
   }
-  .line{
+  .line {
     width: 2px;
     height: 15px;
     background-color: $mainColor;
     margin: 0 10px;
     display: inline-flex;
+  }
+}
+/* ================================================================ */
+.form_strip_page {
+  padding-top: 80px;
+  padding-bottom: 90px;
+  h5 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $mainColor;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  p {
+    color: $mainColor;
+    text-align: center;
+    // margin-bottom: 45px;
+  }
+}
+.form_style {
+  // width: 500px;
+  // max-width: 100%;
+  margin: auto;
+  .form-group {
+    margin-top: 25px;
+  }
+  label {
+    margin-bottom: 13px;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    color: $mainColor;
+  }
+  .form-control {
+    height: 50px;
+    background-color: #f1f2ff;
+    border-radius: 14px;
+    padding-left: 25px;
+    border: 1px solid #d5d5d5;
+    &::placeholder {
+      color: $mainColor;
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+  }
+  .forget_pass {
+    text-align: right;
+    margin-top: 18px;
+    a {
+      font-size: 0.9rem;
+      color: $mainColor;
+      text-decoration: underline;
+    }
+  }
+  .btn_submit {
+    margin-top: 37px;
+  }
+  .dont_account {
+    margin-top: 25px;
+    text-align: center;
+    h6 {
+      font-size: 1.2rem;
+      color: $mainColor;
+      font-weight: 400;
+      a {
+        font-weight: bold;
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+/* ================================================================ */
+.custom_breadcrumb {
+  padding: 40px 0;
+  h5 {
+    font-size: 1rem;
+    color: $mainColor;
+    font-weight: 400;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+/* ================================================================ */
+.product_tools {
+  .category_slider_listing {
+    .category_card {
+      .card_icon {
+        width: 60px;
+        height: 60px;
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+  .head {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $mainColor;
+  }
+}
+.product_list_and_filter {
+  margin-top: 45px;
+  .left_side {
+    width: 20%;
+  }
+  .right_side{
+    width: 80%;
+    padding-left: 20px;
+    .product_card{
+      margin: 0 0;
+      margin-bottom: 23px;
+    }
+  }
+}
+.product_list_filter {
+  background-color: #f1f2ff;
+  padding: 21px 17px;
+  h5 {
+    font-weight: 400;
+    color: $mainColor;
+    font-size: 1.1rem;
+  }
+  hr {
+    color: $mainColor;
+    margin-bottom: 0;
+  }
+  .accordion {
+    padding-top: 15px;
+    border-bottom: 1px solid #c7c9e5;
+    padding-bottom: 15px;
+    .accordion-item {
+      background-color: transparent;
+      border: 0;
+    }
+    .accordion-button {
+      background-color: transparent;
+      padding: 0;
+      font-weight: bold;
+      color: $mainColor;
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+    }
+    .accordion-button:not(.collapsed) {
+      border: 0;
+      box-shadow: none !important;
+    }
+    .accordion-body {
+      text-align: left;
+      padding: 0;
+      padding-top: 12px;
+      padding-left: 10px;
+      .select_category_card_wrapper {
+        margin-top: 5px;
+        h6 {
+          font-size: 0.9rem;
+          font-weight: bold;
+          color: $mainColor;
+        }
+        .select_category_card {
+          display: flex;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+          input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+          }
+          .select_box {
+            width: 12px;
+            height: 12px;
+            border: 1px solid #929292;
+            border-radius: 2px;
+            position: relative;
+            .inner_sele {
+              position: absolute;
+              width: 80%;
+              height: 80%;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              margin-left: 0;
+              border-radius: 2px;
+            }
+          }
+          span {
+            color: $mainColor;
+            margin-left: 10px;
+            display: inline-flex;
+            font-size: 0.9rem;
+          }
+        }
+        input[type="checkbox"]:checked ~ .select_box {
+          .inner_sele {
+            background-color: $mainColor;
+          }
+        }
+      }
+    }
   }
 }
 /* ================================================================ */
