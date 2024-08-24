@@ -1,6 +1,9 @@
 // var layeranimation = gsap.timeline();
 $(document).ready(function () {
 
+  if($(".custom_select").length){
+    $(".custom_select").niceSelect();
+  }
 
 
   if($(".category_slider").length){
@@ -173,6 +176,11 @@ $(document).ready(function () {
     });
   }
   
+  // if($(".accordion_price").length){
+  //   $(".accordion_price input").on('change', function(e){
+  //     console.log(e.target.value)
+  //   })
+  // }
 
   AOS.init();
 });

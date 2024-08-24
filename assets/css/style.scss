@@ -710,6 +710,7 @@ body.modal-open .mm-slideout {
 /* ================================================================ */
 .custom_footer {
   padding: 78px 0;
+  border-top: 10px solid $mainColor;
   .footer_logo {
     img {
       margin-bottom: 20px;
@@ -913,16 +914,35 @@ body.modal-open .mm-slideout {
   }
 }
 .product_list_and_filter {
+  padding-bottom: 100px;
   margin-top: 45px;
   .left_side {
     width: 20%;
   }
-  .right_side{
+  .right_side {
     width: 80%;
     padding-left: 20px;
-    .product_card{
+    .product_card {
       margin: 0 0;
       margin-bottom: 23px;
+    }
+    .sort_by {
+      & > span {
+        color: $mainColor;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .nice-select {
+        float: none;
+        width: 203px;
+        height: 35px;
+        background-color: #f1f2ff;
+        line-height: 35px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: 0;
+        margin-left: 25px;
+      }
     }
   }
 }
@@ -1016,7 +1036,164 @@ body.modal-open .mm-slideout {
       }
     }
   }
+  .accordion_price {
+    input[type="range"] {
+      /* removing default appearance */
+      -webkit-appearance: none;
+      appearance: none;
+      /* creating a custom design */
+      width: 100%;
+      cursor: pointer;
+      outline: none;
+      /*  slider progress trick  */
+      overflow: hidden;
+      height: 24px;
+      position: relative;
+      background-color: transparent;
+      // border-radius: 16px;
+      // border: 1px solid #000;
+      &::after {
+        // width: 90%;
+        // height: 4px;
+        // background-color: $mainColor;
+        // z-index: 3;
+        // content: "";
+        // position: absolute;
+        // top: 50%;
+        // transform: translate(0, -50%);
+        // border-radius: 20px !important;
+      }
+    }
+
+    /* Track: webkit browsers */
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 4px;
+      background: $mainColor;
+      border-radius: 50px !important;
+      position: relative;
+    }
+
+    /* Track: Mozilla Firefox */
+    input[type="range"]::-moz-range-track {
+      height: 4px;
+      background: $mainColor;
+      border-radius: 50px !important;
+      z-index: 4;
+    }
+
+    /* Thumb: webkit */
+    input[type="range"]::-webkit-slider-thumb {
+      /* removing default appearance */
+      -webkit-appearance: none;
+      appearance: none;
+      /* creating a custom design */
+      height: 24px;
+      width: 24px;
+      background-color: #f84242;
+      border-radius: 50%;
+      z-index: 999;
+      top: 50%;
+      position: relative;
+      transform: translate(0, -50%);
+      // border: 2px solid #f50;
+      /*  slider progress trick  */
+      // box-shadow: -407px 0 0 400px #f50;
+    }
+
+    /* Thumb: Firefox */
+    input[type="range"]::-moz-range-thumb {
+      height: 15px;
+      width: 15px;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid #f50;
+      /*  slider progress trick  */
+      box-shadow: -407px 0 0 400px #f50;
+    }
+  }
 }
+/* ================================================================ */
+.product_details_page {
+  .product_details_info {
+    h5 {
+      color: $mainColor;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    hr {
+      margin: 25px 0;
+      color: #e2e2e2;
+    }
+    ul {
+      li {
+        margin-bottom: 20px;
+        span {
+          color: $mainColor;
+        }
+        span:first-child {
+          margin-right: 10px;
+        }
+        span:last-child {
+          font-weight: bold;
+        }
+      }
+    }
+    .you_can_buy{
+      margin-top: 40px;
+      h4{
+        font-size: 1rem;
+        font-weight: 400;
+        color: $mainColor;
+      }
+      .bank_card{
+        border: 1px solid #E2E2E2;
+        border-radius: 15px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 39px;
+        width: 69px;
+        position: relative;
+        img{
+          width: 50px;
+          position: relative;
+          display: inline-block;
+        }
+      }
+    }
+    .quantity{
+      margin-top: 40px;
+      span{
+        font-weight: 400;
+        color: $mainColor;
+        font-size: 1rem;
+      }
+      .form-control{
+        width: 95px;
+        height: 50px;
+        border: 1px solid #E2E2E2;
+        border-radius: 10px;
+        margin: 0 18px;
+        text-align: center;
+      }
+      .custom_link{
+        width: 100%;
+        font-weight: bold;
+      }
+    }
+  }
+}
+/* ================================================================ */
+
+/* ================================================================ */
+
+/* ================================================================ */
+
+/* ================================================================ */
+
+/* ================================================================ */
+
 /* ================================================================ */
 
 /* Shared styles  */
