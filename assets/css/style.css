@@ -1484,6 +1484,45 @@ body.modal-open .mm-slideout {
 }
 
 /* ================================================================ */
+.my_account_page {
+  padding-bottom: 200px;
+}
+.my_account_page .section_header {
+  margin-bottom: 45px;
+}
+.my_account_page .my_account_page_cotnent h5 {
+  font-weight: bold;
+  color: #010d77;
+  font-size: 1.2rem;
+}
+.my_account_page label {
+  display: block;
+  width: 100%;
+}
+
+.my_account_option {
+  background-color: #F1F2FF;
+  padding: 18px;
+}
+.my_account_option li {
+  margin-bottom: 5px;
+}
+.my_account_option li a {
+  width: 100%;
+  padding: 8px 10px;
+  display: inline-block;
+  color: #010D77;
+  font-weight: 350;
+}
+.my_account_option li.active a {
+  background-color: #3881EF;
+  color: #fff;
+}
+.my_account_option li:hover a {
+  background-color: #3881EF;
+  color: #fff;
+}
+
 /* ================================================================ */
 /* ================================================================ */
 /* Shared styles  */
