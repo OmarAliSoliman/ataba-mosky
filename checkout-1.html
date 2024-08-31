@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="./assets/css/nice-select.css" />
   <link rel="stylesheet" href="./assets/css/slick.css">
   <link rel="stylesheet" href="./assets/css/slick-theme.css">
+  <link rel="stylesheet" href="./assets/css/jquery.mCustomScrollbar.css">
   <!-- for image or video popup -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
   <!-- for animation -->
@@ -97,7 +98,7 @@
           <ul class="list-unstyled d-flex align-items-center">
             <li><a href=""><img src="./assets/images/login.svg" alt=""><span>Sign in</span></a></li>
             <li class="line d-inline-flex"><span></span></li>
-            <li><a href=""><img src="./assets/images/cart.svg" alt=""><span>Cart</span></a></li>
+            <li class="backet_icon"><a><img src="./assets/images/cart.svg" alt=""><span>Cart</span><span class="bulletNum">5</span></a></li>
           </ul>
         </div>
       </div>
@@ -284,6 +285,129 @@
     </div>
   </div>
 
+
+    <!-- cart_modal -->
+    <div class="your_cart_modal">
+      <form action="">
+        <div class="head d-flex align-items-center justify-content-between">
+          <h5>YOUR CART</h5>
+          <button type="button"><img src="./assets/images/cancel.svg" alt=""></button>
+        </div>
+        <div class="items_in_cart">
+  
+          <div class="title_strip">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <h5 class="first">Item</h5>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-2">
+                <h5>Price</h5>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-2">
+                <h5>Qty</h5>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-2">
+                <h5>Subtotal</h5>
+              </div>
+            </div>
+          </div>
+  
+          <div class="cart_item">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="cart_icon">
+                  <img src="./assets/images/pr-1.png" alt="">
+                  <div class="card_body">
+                    <h5>Zahran / Stainless Steel</h5>
+                    <div class="option">
+                      <a href="">Remove</a>
+                      <a href="">Move to Wishlist</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-2 col-lg-2">
+                <div class="cart_price">
+                  <h4>235 EGP</h4>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-2 col-lg-2">
+                <div class="increase_decrease d-flex align-items-center">
+                  <button class="button_minus"><i class="fas fa-minus"></i></button>
+                  <input type="text" value="1">
+                  <button class="button_blus"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-2 col-lg-2">
+                <div class="cart_total">
+                  <h4>235 EGP</h4>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+  
+          <div class="cart_item">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="cart_icon">
+                  <img src="./assets/images/pr-2.png" alt="">
+                  <div class="card_body">
+                    <h5>Zahran / Stainless Steel</h5>
+                    <div class="option">
+                      <a href="">Remove</a>
+                      <a href="">Move to Wishlist</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-2 col-lg-2">
+                <div class="cart_price">
+                  <h4>235 EGP</h4>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-2 col-lg-2">
+                <div class="increase_decrease d-flex align-items-center">
+                  <button class="button_minus"><i class="fas fa-minus"></i></button>
+                  <input type="text" value="1">
+                  <button class="button_blus"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-2 col-lg-2">
+                <div class="cart_total">
+                  <h4>235 EGP</h4>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+  
+          <div class="items_cart_option">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-7">
+                <a href="">Save and Continue Shopping</a>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-5">
+                <a href="" class="last">Empty Cart</a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="summery_box">
+            <h5>Summary</h5>
+            <hr>
+            <ul class="list-unstyled">
+              <li><span>Quantity</span><span>2 items</span></li>
+              <li><span>Subtotal</span><span>535 EGP</span></li>
+            </ul>
+          </div>
+          <button class="place_order">Place Order</button>
+  
+        </div>
+      </form>
+  
+    </div>
+
   <script src="./assets/js/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
@@ -293,6 +417,7 @@
   <!-- for animation -->
   <script src="./assets/js/slick.js"></script>
   <script src="./assets/js/aos.js"></script>
+  <script src="./assets/js/jquery.mCustomScrollbar.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 

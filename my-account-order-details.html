@@ -115,80 +115,176 @@
   </div>
 
 
-
-  <div class="checkout_page_1 checkout_page_2">
+  <div class="my_account_page">
     <div class="container">
+      <div class="section_header">
+        <h5>My Account</h5>
+      </div>
       <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-8">
-          <div class="checkout_page_links">
-            <a href="">Information</a>
-            <a href="" class="active">Payment</a>
-            <a href="">Complete</a>
+        <div class="col-sm-12 col-md-4 col-lg-3">
+          <div class="my_account_option">
+            <ul class="list-unstyled">
+              <li class="active"><a href="">Profile</a></li>
+              <li><a href="">Address</a></li>
+              <li><a href="">Wishlist</a></li>
+              <li><a href="">Orders</a></li>
+            </ul>
           </div>
-          <div class="shipping_adress">
-            <h5>Select Payment Method</h5>
-            <form action="">
-              <div class="form-group">
-                <label for="adress1">
-                  <input type="radio" checked id="adress1" name="adressshipping">
-                  <div class="shipping_adress_card d-flex">
-                    <div class="bolled">
-                      <span></span>
-                    </div>
-                    <div class="card_body">
-                      <h5>Online Payment</h5>
-                    </div>
-                  </div>
-                </label>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-9">
+          <div class="my_account_page_cotnent my_account_order_details_page_cotnent">
+            <div class="top_form mb-3 d-flex align-items-center justify-content-between">
+              <h5 class="mb-0">Orders</h5>
+              <!-- <a href=""><img src="./assets/images/edit-3-svgrepo-com.svg" alt=""></a> -->
+            </div>
+            <div class="my_account_order_details_card">
+              <div class="head">
+                <h5>Order Delivered</h5>
               </div>
 
-              <div class="form-group">
-                <label for="adress2">
-                  <input type="radio" id="adress2" name="adressshipping">
-                  <div class="shipping_adress_card d-flex">
-                    <div class="bolled">
-                      <span></span>
-                    </div>
-                    <div class="card_body">
-                      <h5>Cash On Delivery </h5>
-                    </div>
-                  </div>
-                </label>
-              </div>
-            </form>
-          </div>
-
-          <div class="add_new_adress">
-            <div class="row align-items-end">
-              <div class="col-sm-12 col-md-6 col-lg-7">
-                <div class="promo_code">
-                  <h4>Have a promo code?</h4>
-                  <div class="promo_form">
-                    <input type="text" placeholder="Enter your promo code">
-                    <button>Apply</button>
+              <div class="adress_part">
+                <h6>Shipping Address</h6>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <div class="form-group">
+                    <label for="adress1">
+                      <!-- <input type="radio" checked id="adress1" name="adressshipping"> -->
+                      <div class="shipping_adress_card d-flex">
+                        <!-- <a href="" class="edit_adress"><img src="./assets/images/edit-3-svgrepo-com.svg" alt=""></a> -->
+                        <!-- <div class="bolled">
+                          <span></span>
+                        </div> -->
+                        <div class="card_body">
+                          <h5>Home</h5>
+                          <p>Add : 6A Road 23, 3rd Floor, Maadi,Cairo – Egypt</p>
+                          <p>Mobile : 0123456789</p>
+                        </div>
+                      </div>
+                    </label>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-5">
-                <a href="" class="next_link">Next</a>
-              </div>
-            </div>
-          </div>
 
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="summery_box">
-            <h5>Summary</h5>
-            <hr>
-            <ul class="list-unstyled">
-              <li><span>Quantity</span><span>2 items</span></li>
-              <li><span>Subtotal</span><span>535 EGP</span></li>
-            </ul>
+
+              <div class="your_orders_summery">
+                <div class="head">
+                  <h5>Your Order</h5>
+                </div>
+                <div class="title_strip">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                      <h5 class="first">Item</h5>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-2">
+                      <h5>Price</h5>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-2">
+                      <h5>Qty</h5>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-2">
+                      <h5>Subtotal</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cart_item">
+                  <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                      <div class="cart_icon">
+                        <img src="./assets/images/pr-1.png" alt="">
+                        <div class="card_body">
+                          <h5>Zahran / Stainless Steel</h5>
+                          <div class="option">
+                            <a href="">Remove</a>
+                            <a href="">Move to Wishlist</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-2">
+                      <div class="cart_price">
+                        <h4>235 EGP</h4>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-2">
+                      <div class="increase_decrease d-flex align-items-center">
+                        <!-- <button class="button_minus"><i class="fas fa-minus"></i></button> -->
+                        <input type="text" value="1" readonly>
+                        <!-- <button class="button_blus"><i class="fas fa-plus"></i></button> -->
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-2">
+                      <div class="cart_total">
+                        <h4>235 EGP</h4>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="cart_item">
+                  <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                      <div class="cart_icon">
+                        <img src="./assets/images/pr-2.png" alt="">
+                        <div class="card_body">
+                          <h5>Zahran / Stainless Steel</h5>
+                          <div class="option">
+                            <a href="">Remove</a>
+                            <a href="">Move to Wishlist</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-2">
+                      <div class="cart_price">
+                        <h4>235 EGP</h4>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-2">
+                      <div class="increase_decrease d-flex align-items-center">
+                        <!-- <button class="button_minus"><i class="fas fa-minus"></i></button> -->
+                        <input type="text" value="2" readonly>
+                        <!-- <button class="button_blus"><i class="fas fa-plus"></i></button> -->
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-2">
+                      <div class="cart_total">
+                        <h4>235 EGP</h4>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="row mt-5">
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="method">
+                      <h4 class="headr">Payment Method</h4>
+                      <h5>Cash On Delivery </h5>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="summery_box">
+                      <h5>Summary</h5>
+                      <hr>
+                      <ul class="list-unstyled">
+                        <li><span>Quantity</span><span>2 items</span></li>
+                        <li><span>Subtotal</span><span>535 EGP</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 
 
   <div class="custom_footer">
@@ -288,7 +384,6 @@
 
     </div>
   </div>
-
 
     <!-- cart_modal -->
     <div class="your_cart_modal">
