@@ -44,7 +44,7 @@ $(document).ready(function () {
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             // centerMode: false,
           },
         },
@@ -113,6 +113,13 @@ $(document).ready(function () {
             // centerMode: false,
           },
         },
+        {
+          breakpoint: 370,
+          settings: {
+            slidesToShow: 1,
+            // centerMode: false,
+          },
+        },
       ],
     });
   }
@@ -165,6 +172,13 @@ $(document).ready(function () {
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
+            // centerMode: false,
+          },
+        },
+        {
+          breakpoint: 370,
+          settings: {
+            slidesToShow: 1,
             // centerMode: false,
           },
         },
