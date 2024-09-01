@@ -1889,6 +1889,12 @@ body.modal-open .mm-slideout {
   .summery_box {
     margin-top: 30px;
   }
+  .my_account_option {
+    margin-bottom: 20px;
+  }
+  .product_list_and_filter .left_side {
+    width: 35%;
+  }
 }
 @media (max-width: 600px) {
   html {
@@ -1997,6 +2003,46 @@ body.modal-open .mm-slideout {
   }
   .checkout_done {
     padding-bottom: 100px;
+  }
+  .my_account_option {
+    margin-bottom: 20px;
+  }
+  .my_account_option ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: space-between;
+  }
+  .my_account_option ul li {
+    min-width: -moz-max-content;
+    min-width: max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .my_account_order_details_card {
+    padding: 20px 11px;
+  }
+  .my_account_order_details_card .your_orders_summery .title_strip {
+    display: none;
+  }
+  .my_account_orders_page_cotnent .top_form h5, .my_account_order_details_page_cotnent .top_form h5 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .product_card .card_icon img {
+    width: 65%;
+  }
+  .product_list_and_filter .right_side {
+    width: 100%;
+  }
+  .product_list_and_filter {
+    position: relative;
+  }
+  .product_list_and_filter .left_side {
+    width: 100%;
+    position: absolute;
+    z-index: 6;
+    left: -100%;
   }
 }
 @media (max-width: 380px) {

@@ -212,21 +212,21 @@ $(document).ready(function () {
         {
           breakpoint: 1150,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: 5,
             // centerMode: false,
           },
         },
         {
           breakpoint: 1100,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 5,
             // centerMode: false,
           },
         },
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 5,
             // centerMode: false,
           },
         },
@@ -234,7 +234,7 @@ $(document).ready(function () {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 5,
             // centerMode: false,
           },
         },
