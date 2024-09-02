@@ -23,6 +23,9 @@
   <link rel="stylesheet" href="./assets/css/jquery.mCustomScrollbar.css">
   <!-- for image or video popup -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css"
+    integrity="sha512-nNatP1G6CEh43irXY/GN4cDcLRX/R0jAYAV/ulFZcotSXcuIQE5Do4TuDOYNAD2SCIpmIbaYSllyjTysSCkpEw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- for animation -->
   <link rel="stylesheet" href="./assets/css/aos.css">
   <!-- for english version please change style to ar style ./assets/css/style-ar.css -->
@@ -32,6 +35,27 @@
 
 <body>
 
+  <!-- mobile menu -->
+  <nav id="menu">
+    <ul>
+      <li>
+        <span><a href="#home">Home</a></span>
+      </li>
+      <li>
+        <span><a href="#whoUs">Categories</a></span>
+        <ul>
+          <li><a href="">Categorie1</a></li>
+          <li><a href="">Categorie2</a></li>
+          <li><a href="">Categorie3</a></li>
+          <li><a href="">Categorie4</a></li>
+          <li><a href="">Categorie5</a></li>
+        </ul>
+      </li>
+      <li>
+        <span><a href="#ourPartners">Hot Deals</a></span>
+      </li>
+    </ul>
+  </nav>
 
   <div class="active_overlay"></div>
 
@@ -78,6 +102,11 @@
           <a href="" class="logo">
             <img src="./assets/images/logo.svg" alt="">
           </a>
+          <div class="menu_icon">
+            <a href="#menu">
+              <img src="./assets/images/menu.png" alt="">
+            </a>
+          </div>
           <ul class="links list-unstyled">
             <li><a href=""><img src="./assets/images/home.svg" alt=""><span>Home</span></a></li>
             <li><a href=""><img src="./assets/images/category.svg" alt=""><span>Categories</span><i
@@ -145,7 +174,7 @@
   <div class="category_section">
     <div class="container">
 
-      <div class="section_header d-flex align-items-center justify-content-between">
+      <div class="section_header d-flex align-items-center justify-content-between" data-aos="fade-up">
         <h5>Our Category</h5>
         <div class="custom_category_arrow custom_slick_arrow">
           <ul class="list-unstyled">
@@ -154,7 +183,7 @@
           </ul>
         </div>
       </div>
-      <div class="category_slider">
+      <div class="category_slider" data-aos="fade-up">
         <div class="slider_item">
           <a href="" class="category_card first_hover">
             <div class="card_icon">
@@ -248,7 +277,7 @@
         <div class="col-sm-12 col-md-6 col-lg-6"></div>
         <div class="col-sm-12 col-md-6 col-lg-6 h-100">
           <div class="offer_contnet">
-            <div class="wrap">
+            <div class="wrap" data-aos="fade-up">
               <h5>Great Deals to Explore</h5>
               <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -267,15 +296,15 @@
   <div class="products_section">
     <div class="container">
       <div class="section_header d-flex align-items-center justify-content-between">
-        <h5>New Arrivals</h5>
-        <div class="custom_category_arrow1 custom_slick_arrow">
+        <h5 data-aos="fade-up">New Arrivals</h5>
+        <div class="custom_category_arrow1 custom_slick_arrow" data-aos="fade-up">
           <ul class="list-unstyled">
             <li class="next"><img src="./assets/images/arrow.svg" alt=""></li>
             <li class="prev"><img src="./assets/images/arrow.svg" alt=""></li>
           </ul>
         </div>
       </div>
-      <div class="products_section_slider">
+      <div class="products_section_slider" data-aos="fade-up">
         <div class="slider_item">
           <a href="" class="product_card">
             <div class="heart">
@@ -381,7 +410,7 @@
 
   <div class="offer_section oppsite_offer_section">
     <div class="offer_img">
-      <div class="card_img">
+      <div class="card_img" data-aos="fade-up">
         <div class="img_parent">
           <img src="./assets/images/offerimg.png" alt="">
         </div>
@@ -390,7 +419,7 @@
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-sm-12 col-md-6 col-lg-6 h-100">
-          <div class="offer_contnet">
+          <div class="offer_contnet" data-aos="fade-up">
             <div class="wrap">
               <h5>Great Deals to Explore</h5>
               <p>
@@ -410,7 +439,7 @@
 
   <div class="products_section">
     <div class="container">
-      <div class="section_header d-flex align-items-center justify-content-between">
+      <div class="section_header d-flex align-items-center justify-content-between" data-aos="fade-up">
         <h5>Best Sellers</h5>
         <div class="custom_category_arrow2 custom_slick_arrow">
           <ul class="list-unstyled">
@@ -419,7 +448,7 @@
           </ul>
         </div>
       </div>
-      <div class="products_section_slider2">
+      <div class="products_section_slider2" data-aos="fade-up">
         <div class="slider_item">
           <a href="" class="product_card">
             <div class="heart">
@@ -523,7 +552,7 @@
 
 
 
-  <div class="our_brnads">
+  <div class="our_brnads" data-aos="fade-up">
     <div class="container">
       <div class="section_header">
         <h5>Our Brands</h5>
@@ -548,7 +577,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-sm-12 col-md-6 col-lg-5">
-          <div class="content">
+          <div class="content" data-aos="fade-up">
             <h5>Buy Now .. Pay Later</h5>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy </p>
             <a href="" class="custom_link">Explore Now</a>
@@ -559,22 +588,22 @@
         <div class="col-sm-12 col-md-6 col-lg-5">
           <div class="banks d-flex align-items-center justify-content-end">
             <div class="row w-100">
-              <div class="col-6 col-md-6 col-lg-6">
+              <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up">
                 <div class="bank_card">
                   <img src="./assets/images/bank1.png" alt="">
                 </div>
               </div>
-              <div class="col-6 col-md-6 col-lg-6">
+              <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up">
                 <div class="bank_card">
                   <img src="./assets/images/bank2.png" alt="">
                 </div>
               </div>
-              <div class="col-6 col-md-6 col-lg-6">
+              <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up">
                 <div class="bank_card">
                   <img src="./assets/images/bank3.png" alt="">
                 </div>
               </div>
-              <div class="col-6 col-md-6 col-lg-6">
+              <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up">
                 <div class="bank_card">
                   <img src="./assets/images/bank4.png" alt="">
                 </div>
@@ -816,6 +845,9 @@
   <script src="./assets/js/slick.js"></script>
   <script src="./assets/js/aos.js"></script>
   <script src="./assets/js/jquery.mCustomScrollbar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.js"
+    integrity="sha512-l2fHTYCLVbhRDc5CZWrkKJ06JWFjG5etNQ4G85PbyRiHP769IiVDmhwI0BYSFOXYJUYRmaq5PvfaxacZm9eqhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 

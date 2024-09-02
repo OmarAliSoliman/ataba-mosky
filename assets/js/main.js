@@ -315,4 +315,14 @@ $(window).on("load", function () {
   // setTimeout(() => {
   //   animateFromLeft();
   // }, 2000);
+  var currentDir = $("a").css("direction");
+  console.log(currentDir)
+  // $(".splashscreen").addClass("splashscreen_none");
+  new Mmenu("#menu", {
+    offCanvas: {
+      slidingSubmenus: false,
+      position: currentDir == "rtl" ? "right-front" : "left-front",
+    },
+    theme: "light",
+  });
 });
