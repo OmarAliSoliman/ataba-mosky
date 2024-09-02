@@ -2282,6 +2282,11 @@ body.modal-open .mm-slideout {
     z-index: 6;
     left: -100%;
   }
+  .align-items-start{
+    li{
+      width: 100% !important;
+    }
+  }
 }
 
 @media(max-width: 380px){
