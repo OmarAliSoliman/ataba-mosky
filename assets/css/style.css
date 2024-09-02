@@ -1758,6 +1758,7 @@ body.modal-open .mm-slideout {
   color: #010d77;
   font-size: 2rem;
   font-weight: bold;
+  margin: 0;
 }
 .your_cart_modal .head button {
   width: 65px;
@@ -1940,10 +1941,29 @@ body.modal-open .mm-slideout {
     display: block;
     padding-left: 5px;
   }
+  .your_cart_modal {
+    padding: 49px 15px;
+  }
 }
 @media (max-width: 600px) {
   html {
     font-size: 12px;
+  }
+  .your_cart_modal .items_in_cart .title_strip {
+    display: none;
+  }
+  .your_cart_modal .items_in_cart .items_cart_option a.last {
+    margin-top: 14px;
+  }
+  .your_cart_modal .head {
+    margin-bottom: 25px;
+  }
+  .your_cart_modal .head button {
+    width: 45px;
+    height: 45px;
+  }
+  .your_cart_modal .head h5 {
+    margin: 0;
   }
   .custom_header .card_img {
     height: auto;
