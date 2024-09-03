@@ -212,6 +212,58 @@ body.modal-open .mm-slideout {
   color: #f84242;
 }
 
+.splach_loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+.splach_loading .scene {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.splach_loading .cart-container {
+  width: 900px;
+  margin: 5em auto;
+}
+.splach_loading #cart {
+  width: 150px;
+  display: inline-block;
+}
+.splach_loading .product {
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  transform: scale(2);
+}
+.splach_loading #image {
+  width: 300px;
+  margin: 1em auto;
+  position: relative;
+  top: -20px;
+}
+.splach_loading #image img {
+  width: 100%;
+}
+
+.splashscreen_none {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
 /* ================================================================ */
 .custonm_navbar {
   padding: 18px 0;
@@ -583,6 +635,24 @@ body.modal-open .mm-slideout {
 .product_card:hover {
   border-color: #3881ef;
 }
+.product_card .addtocart_icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.product_card .addtocart_icon button {
+  display: block;
+  background-color: transparent;
+  border: 0;
+  background-color: #3881ef;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.product_card .addtocart_icon button img {
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
 
 /* ================================================================ */
 .our_brnads {
@@ -881,10 +951,35 @@ body.modal-open .mm-slideout {
   border: 0;
   margin-left: 25px;
 }
+.product_list_and_filter .right_side .filter_icon {
+  margin-bottom: 20px;
+  display: none;
+}
+.product_list_and_filter .right_side .filter_icon button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #010d77;
+  border: 1px solid #010d77;
+}
+.product_list_and_filter .right_side .filter_icon button img {
+  filter: brightness(0) invert(1);
+  width: 25px;
+}
+.product_list_and_filter .right_side .filter_icon button:hover {
+  background-color: #fff;
+}
+.product_list_and_filter .right_side .filter_icon button:hover img {
+  filter: none;
+}
 
 .product_list_filter {
   background-color: #f1f2ff;
   padding: 21px 17px;
+}
+.product_list_filter .close {
+  display: none;
 }
 .product_list_filter h5 {
   font-weight: 400;
@@ -1997,7 +2092,8 @@ body.modal-open .mm-slideout {
   .our_brnads li {
     width: 45%;
   }
-  .copy_right h5, .copy_right a {
+  .copy_right h5,
+  .copy_right a {
     font-size: 0.8rem;
   }
   .cart_page .title_strip {
@@ -2061,7 +2157,8 @@ body.modal-open .mm-slideout {
   .my_account_order_details_card .your_orders_summery .title_strip {
     display: none;
   }
-  .my_account_orders_page_cotnent .top_form h5, .my_account_order_details_page_cotnent .top_form h5 {
+  .my_account_orders_page_cotnent .top_form h5,
+  .my_account_order_details_page_cotnent .top_form h5 {
     margin-bottom: 10px;
     margin-top: 20px;
   }
@@ -2075,13 +2172,42 @@ body.modal-open .mm-slideout {
     position: relative;
   }
   .product_list_and_filter .left_side {
-    width: 100%;
+    width: 98%;
     position: absolute;
     z-index: 6;
     left: -100%;
+    transition: all 0.3s ease-in-out;
+  }
+  .product_list_filter {
+    position: relative;
+  }
+  .product_list_filter .close {
+    width: 25px;
+    height: 25px;
+    background-color: #0069c7;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .product_list_filter .close img {
+    width: 10px;
+  }
+  .active_left_side {
+    left: 0 !important;
+    z-index: 9999 !important;
   }
   .align-items-start li {
     width: 100% !important;
+  }
+  .product_list_and_filter .right_side {
+    padding-left: 0;
+  }
+  .product_list_and_filter .right_side .filter_icon {
+    display: block;
   }
 }
 @media (max-width: 380px) {
