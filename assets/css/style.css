@@ -214,9 +214,9 @@ body.modal-open .mm-slideout {
 
 :root {
   --hue: 223;
-  --bg: hsl(var(--hue),10%,90%);
-  --fg: hsl(var(--hue),10%,10%);
-  --primary: hsl(var(--hue),90%,55%);
+  --bg: hsl(var(--hue), 10%, 90%);
+  --fg: hsl(var(--hue), 10%, 10%);
+  --primary: hsl(var(--hue), 90%, 55%);
   --trans-dur: 0.3s;
   font-size: calc(6px + 4 * (100vw - 320px) / 960);
 }
@@ -294,8 +294,8 @@ body.modal-open .mm-slideout {
 }
 @media (prefers-color-scheme: dark) {
   .splach_loading :root {
-    --bg: hsl(var(--hue),10%,10%);
-    --fg: hsl(var(--hue),10%,90%);
+    --bg: hsl(var(--hue), 10%, 10%);
+    --fg: hsl(var(--hue), 10%, 90%);
   }
   .splach_loading .cart__track {
     stroke: hsla(var(--hue), 10%, 90%, 0.5);
@@ -470,6 +470,103 @@ body.modal-open .mm-slideout {
   color: #fff;
   font-size: 0.7rem;
   border-radius: 50%;
+}
+.custonm_navbar .submenu_parent {
+  position: relative;
+}
+.custonm_navbar .submenu_parent .submenu {
+  background-color: #fff;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.16);
+  position: absolute;
+  top: 40px;
+  left: 0;
+  max-width: 800px;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 9;
+  padding: 30px 0;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside {
+  border-right: 1px solid #eee;
+  width: 30%;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside li {
+  margin: 0;
+  margin-bottom: 7px;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 15px;
+  color: #000;
+  font-size: 0.9rem;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside li a span, .custonm_navbar .submenu_parent .submenu .submenu_leftside li a img {
+  transition: all 0.3s ease-in-out;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside li.active a {
+  background-color: #1a8be1;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside li.active a span {
+  color: #fff;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside li.active a img {
+  filter: brightness(0) invert(1);
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside li:hover a {
+  background-color: #1a8be1;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside li:hover a span {
+  color: #fff;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside li:hover a img {
+  filter: brightness(0) invert(1);
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside img {
+  width: 25px;
+  height: 25px;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_leftside span {
+  margin-left: 10px;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_rightside {
+  width: 70%;
+  padding: 0 20px;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_rightside .sub_category_links .sub_category_card {
+  margin-bottom: 30px;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_rightside .sub_category_links .sub_category_card h5 {
+  font-size: 0.9rem;
+  color: #010d77;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_rightside .sub_category_links .sub_category_card li {
+  margin: 0;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_rightside .sub_category_links .sub_category_card li a {
+  color: #010d77;
+  font-size: 0.9rem;
+  font-weight: 300;
+  display: block;
+  width: 100%;
+  padding: 3px 5px;
+  text-transform: capitalize;
+}
+.custonm_navbar .submenu_parent .submenu .submenu_rightside .sub_category_links .sub_category_card li a:hover {
+  background-color: #F0F2FF;
+}
+.custonm_navbar .submenu_parent:hover .submenu {
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
 }
 
 .login_navbar .wrapper {
@@ -2071,6 +2168,12 @@ body.modal-open .mm-slideout {
   }
   .cart_item .increase_decrease {
     width: 100px;
+  }
+  .custonm_navbar .submenu_parent .submenu {
+    width: 650px;
+  }
+  .custonm_navbar .submenu_parent .submenu .submenu_leftside li {
+    margin-bottom: 2px;
   }
 }
 @media (max-width: 991px) {

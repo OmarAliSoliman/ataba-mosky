@@ -233,15 +233,15 @@ body.modal-open .mm-slideout {
   }
 }
 :root {
-	--hue: 223;
-	--bg: hsl(var(--hue),10%,90%);
-	--fg: hsl(var(--hue),10%,10%);
-	--primary: hsl(var(--hue),90%,55%);
-	--trans-dur: 0.3s;
-	font-size: calc(6px + (20 - 16) * (100vw - 320px) / (1280 - 320));
+  --hue: 223;
+  --bg: hsl(var(--hue), 10%, 90%);
+  --fg: hsl(var(--hue), 10%, 10%);
+  --primary: hsl(var(--hue), 90%, 55%);
+  --trans-dur: 0.3s;
+  font-size: calc(6px + (20 - 16) * (100vw - 320px) / (1280 - 320));
 }
 
-.splach_loading{
+.splach_loading {
   position: absolute;
   top: 0;
   left: 0;
@@ -253,7 +253,7 @@ body.modal-open .mm-slideout {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   .preloader {
     text-align: center;
     max-width: 20em;
@@ -303,24 +303,24 @@ body.modal-open .mm-slideout {
     transform-origin: 102px 111px;
   }
   .cart__wheel-stroke {
-    animation-name: cartWheelStroke
+    animation-name: cartWheelStroke;
   }
   .cart__track {
-    stroke: hsla(var(--hue),10%,10%,0.1);
+    stroke: hsla(var(--hue), 10%, 10%, 0.1);
     transition: stroke var(--trans-dur);
   }
-  
+
   /* Dark theme */
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: hsl(var(--hue),10%,10%);
-      --fg: hsl(var(--hue),10%,90%);
+      --bg: hsl(var(--hue), 10%, 10%);
+      --fg: hsl(var(--hue), 10%, 90%);
     }
     .cart__track {
-      stroke: hsla(var(--hue),10%,90%,0.5);
+      stroke: hsla(var(--hue), 10%, 90%, 0.5);
     }
   }
-  
+
   /* Animations */
   @keyframes msg {
     from {
@@ -382,10 +382,9 @@ body.modal-open .mm-slideout {
       stroke-dashoffset: 40.84;
     }
   }
-  
 }
 
-.splashscreen_none{
+.splashscreen_none {
   opacity: 0;
   visibility: hidden;
   z-index: -1;
@@ -502,6 +501,111 @@ body.modal-open .mm-slideout {
         color: #fff;
         font-size: 0.7rem;
         border-radius: 50%;
+      }
+    }
+  }
+
+  .submenu_parent {
+    position: relative;
+    .submenu {
+      background-color: #fff;
+      box-shadow: 0 3px 30px rgba(0, 0, 0, 0.16);
+      position: absolute;
+      top: 40px;
+      left: 0;
+      max-width: 800px;
+      width: max-content;
+      z-index: 9;
+      padding: 30px 0;
+      transform: translateY(-10px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all .4s ease-in-out;
+      .submenu_leftside {
+        border-right: 1px solid #eee;
+        width: 30%;
+        li {
+          margin: 0;
+          margin-bottom: 7px;
+          a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 6px 15px;
+            color: #000;
+            font-size: .9rem;
+            span, img{
+              transition: all .3s ease-in-out;
+            }
+          }
+          &.active {
+            a {
+              background-color: #1a8be1;
+              span {
+                color: #fff;
+              }
+              img {
+                filter: brightness(0) invert(1);
+              }
+            }
+          }
+          &:hover {
+            a {
+              background-color: #1a8be1;
+              span {
+                color: #fff;
+              }
+              img {
+                filter: brightness(0) invert(1);
+              }
+            }
+          }
+        }
+        img {
+          width: 25px;
+          height: 25px;
+        }
+        span {
+          margin-left: 10px;
+        }
+      }
+      .submenu_rightside{
+        width: 70%;
+        padding: 0 20px;
+        .sub_category_links{
+          .sub_category_card{
+            margin-bottom: 30px;
+            h5{
+              font-size: .9rem;
+              color: $mainColor;
+              font-weight: bold;
+              margin: 0;
+              margin-bottom: 5px;
+            }
+            li{
+              margin: 0;
+              a{
+                color: $mainColor;
+                font-size: .9rem;
+                font-weight: 300;
+                display: block;
+                width: 100%;
+                padding: 3px 5px;
+                text-transform: capitalize;
+                &:hover{
+                  background-color: #F0F2FF;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &:hover{
+      .submenu{
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -836,11 +940,11 @@ body.modal-open .mm-slideout {
     border-color: #3881ef;
     // border-width: 3px;
   }
-  .addtocart_icon{
+  .addtocart_icon {
     position: absolute;
     top: 15px;
     left: 15px;
-    button{
+    button {
       display: block;
       background-color: transparent;
       border: 0;
@@ -848,7 +952,7 @@ body.modal-open .mm-slideout {
       width: 35px;
       height: 35px;
       border-radius: 50%;
-      img{
+      img {
         width: 20px;
         filter: brightness(0) invert(1);
       }
@@ -1190,7 +1294,7 @@ body.modal-open .mm-slideout {
 .product_list_filter {
   background-color: #f1f2ff;
   padding: 21px 17px;
-  .close{
+  .close {
     display: none;
   }
   h5 {
@@ -2267,6 +2371,12 @@ body.modal-open .mm-slideout {
   .cart_item .increase_decrease {
     width: 100px;
   }
+  .custonm_navbar .submenu_parent .submenu{
+    width: 650px;
+  }
+  .custonm_navbar .submenu_parent .submenu .submenu_leftside li{
+    margin-bottom: 2px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2483,11 +2593,11 @@ body.modal-open .mm-slideout {
     z-index: 6;
     // left: 0;
     left: -100%;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
-  .product_list_filter{
+  .product_list_filter {
     position: relative;
-    .close{
+    .close {
       width: 25px;
       height: 25px;
       background-color: #0069c7;
@@ -2498,13 +2608,13 @@ body.modal-open .mm-slideout {
       display: flex;
       align-items: center;
       justify-content: center;
-      img{
+      img {
         width: 10px;
       }
     }
   }
 
-  .active_left_side{
+  .active_left_side {
     left: 0 !important;
     z-index: 9999 !important;
   }
