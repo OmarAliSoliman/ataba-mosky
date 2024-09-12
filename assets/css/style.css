@@ -480,9 +480,7 @@ body.modal-open .mm-slideout {
   position: absolute;
   top: 40px;
   left: 0;
-  max-width: 800px;
-  width: -moz-max-content;
-  width: max-content;
+  min-width: 800px;
   z-index: 9;
   padding: 30px 0;
   transform: translateY(-10px);
@@ -2170,7 +2168,7 @@ body.modal-open .mm-slideout {
     width: 100px;
   }
   .custonm_navbar .submenu_parent .submenu {
-    width: 650px;
+    min-width: 650px;
   }
   .custonm_navbar .submenu_parent .submenu .submenu_leftside li {
     margin-bottom: 2px;
