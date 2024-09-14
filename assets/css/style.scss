@@ -1552,6 +1552,46 @@ body.modal-open .mm-slideout {
         }
       }
     }
+
+    .color_choosen{
+      .form-group{
+        margin-left: 10px;
+      }
+      label{
+        position: relative;
+        cursor: pointer;
+      }
+      input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .color_picker{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid #D5D5D5;
+      }
+      input[type='radio']:checked ~ .color_picker{
+        border: 2px solid #3881EF;
+        font-weight: bold;
+      }
+    }
+
+    .size_choosen{
+      .color_picker{
+        width: unset;
+        width: fit-content;
+        height: auto;
+        border-radius: 16px;
+        text-align: center;
+        padding: 3px 10px;
+      }
+    }
+
     .you_can_buy {
       margin-top: 40px;
       h4 {
@@ -2339,6 +2379,7 @@ body.modal-open .mm-slideout {
     margin-bottom: 45px;
   }
   .about_content {
+    margin-bottom: 35px;
     h5 {
       font-size: 1.2rem;
       font-weight: bold;
@@ -2353,10 +2394,83 @@ body.modal-open .mm-slideout {
   }
 }
 
+.contact_us_page{
+  padding-bottom: 200px;
+  .section_header {
+    margin-bottom: 45px;
+  }
+  .contact_us_maps{
+    >h5{
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $mainColor;
+      margin-bottom: 50px;
+    }
+    .map_coponent{
+      .com_header{
+        margin-bottom: 15px;
+        h5{
+          font-weight: bold;
+          color: $mainColor;
+          font-size: 1.5rem;
+        }
+        a{
+          border: 1px solid #F84242;
+          color: #F84242;
+          padding: 9px 20px;
+          font-weight: bold;
+          font-size: .9rem;
+          display: inline-flex;
+          border-radius: 14px;
+        }
+      }
+    }
+    .comp_info{
+      margin-top: 20px;
+      li{
+        margin-bottom: 20px;
+        a{
+          color: $mainColor;
+          font-weight: 300;
+          font-size: 1.2rem;
+        }
+        img{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .contact_us_form{
+    > h5{
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $mainColor;
+      margin-bottom: 50px;
+    }
+    button{
+      border-radius: 14px;
+      background-color: #F84242;
+      border-radius: 14px;
+      border: 1px solid #F84242;
+      color: #fff;
+      padding: 12px;
+      width: 260px;
+      margin-top: 35px;
+      display: block;
+      margin-left: auto;
+      &:hover{
+        background-color: #fff;
+        color: #F84242
+      }
+    }
+  }
+}
+
 /* ================================================================ */
 @media (max-width: 1800px) {
   html {
-    font-size: 14px;
+    font-size: 13px !important;
   }
   .custonm_navbar .search_login .search .form-group {
     height: 50px;
@@ -2474,7 +2588,7 @@ body.modal-open .mm-slideout {
 
 @media (max-width: 600px) {
   html {
-    font-size: 12px;
+    font-size: 14px !important;
   }
 
   .your_cart_modal .items_in_cart .title_strip {
@@ -2654,6 +2768,9 @@ body.modal-open .mm-slideout {
         display: block;
       }
     }
+  }
+  .form_style label{
+    font-size: 1.2rem;
   }
 }
 
