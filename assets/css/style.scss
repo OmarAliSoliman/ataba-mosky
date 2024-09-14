@@ -520,7 +520,7 @@ body.modal-open .mm-slideout {
       transform: translateY(-10px);
       opacity: 0;
       visibility: hidden;
-      transition: all .4s ease-in-out;
+      transition: all 0.4s ease-in-out;
       .submenu_leftside {
         border-right: 1px solid #eee;
         width: 30%;
@@ -533,9 +533,10 @@ body.modal-open .mm-slideout {
             width: 100%;
             padding: 6px 15px;
             color: #000;
-            font-size: .9rem;
-            span, img{
-              transition: all .3s ease-in-out;
+            font-size: 0.9rem;
+            span,
+            img {
+              transition: all 0.3s ease-in-out;
             }
           }
           &.active {
@@ -569,31 +570,31 @@ body.modal-open .mm-slideout {
           margin-left: 10px;
         }
       }
-      .submenu_rightside{
+      .submenu_rightside {
         width: 70%;
         padding: 0 20px;
-        .sub_category_links{
-          .sub_category_card{
+        .sub_category_links {
+          .sub_category_card {
             margin-bottom: 30px;
-            h5{
-              font-size: .9rem;
+            h5 {
+              font-size: 0.9rem;
               color: $mainColor;
               font-weight: bold;
               margin: 0;
               margin-bottom: 5px;
             }
-            li{
+            li {
               margin: 0;
-              a{
+              a {
                 color: $mainColor;
-                font-size: .9rem;
+                font-size: 0.9rem;
                 font-weight: 300;
                 display: block;
                 width: 100%;
                 padding: 3px 5px;
                 text-transform: capitalize;
-                &:hover{
-                  background-color: #F0F2FF;
+                &:hover {
+                  background-color: #f0f2ff;
                 }
               }
             }
@@ -601,8 +602,8 @@ body.modal-open .mm-slideout {
         }
       }
     }
-    &:hover{
-      .submenu{
+    &:hover {
+      .submenu {
         transform: translateY(0px);
         opacity: 1;
         visibility: visible;
@@ -2332,6 +2333,26 @@ body.modal-open .mm-slideout {
   z-index: 9999;
 }
 
+.about_us_page {
+  padding-bottom: 200px;
+  .section_header {
+    margin-bottom: 45px;
+  }
+  .about_content {
+    h5 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $mainColor;
+      margin-bottom: 24px;
+    }
+    p {
+      margin-bottom: 24px;
+      color: $mainColor;
+      font-weight: 300;
+    }
+  }
+}
+
 /* ================================================================ */
 @media (max-width: 1800px) {
   html {
@@ -2371,10 +2392,10 @@ body.modal-open .mm-slideout {
   .cart_item .increase_decrease {
     width: 100px;
   }
-  .custonm_navbar .submenu_parent .submenu{
+  .custonm_navbar .submenu_parent .submenu {
     min-width: 650px;
   }
-  .custonm_navbar .submenu_parent .submenu .submenu_leftside li{
+  .custonm_navbar .submenu_parent .submenu .submenu_leftside li {
     margin-bottom: 2px;
   }
 }
