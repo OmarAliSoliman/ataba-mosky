@@ -1410,10 +1410,10 @@ body.modal-open .mm-slideout {
   height: 25px;
   border-radius: 50%;
   background-color: #fff;
-  border: 2px solid #D5D5D5;
+  border: 2px solid #d5d5d5;
 }
 .product_details_page .product_details_info .color_choosen input[type=radio]:checked ~ .color_picker {
-  border: 2px solid #3881EF;
+  border: 2px solid #3881ef;
   font-weight: bold;
 }
 .product_details_page .product_details_info .size_choosen .color_picker {
@@ -1573,6 +1573,28 @@ body.modal-open .mm-slideout {
   color: #010d77;
   font-weight: 300;
   font-size: 0.9rem;
+  margin-right: 20px;
+}
+.cart_item .card_body .chosc {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  border: 2px solid #d5d5d5;
+  display: inline-block;
+}
+.cart_item .card_body .siz {
+  width: unset;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  border-radius: 16px;
+  text-align: center;
+  padding: 1px 7px;
+  border: 1px solid #d5d5d5;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-right: 20px;
 }
 .cart_item .cart_price,
 .cart_item .cart_total {
@@ -2207,8 +2229,8 @@ body.modal-open .mm-slideout {
   font-size: 1.5rem;
 }
 .contact_us_page .contact_us_maps .map_coponent .com_header a {
-  border: 1px solid #F84242;
-  color: #F84242;
+  border: 1px solid #f84242;
+  color: #f84242;
   padding: 9px 20px;
   font-weight: bold;
   font-size: 0.9rem;
@@ -2237,9 +2259,9 @@ body.modal-open .mm-slideout {
 }
 .contact_us_page .contact_us_form button {
   border-radius: 14px;
-  background-color: #F84242;
+  background-color: #f84242;
   border-radius: 14px;
-  border: 1px solid #F84242;
+  border: 1px solid #f84242;
   color: #fff;
   padding: 12px;
   width: 260px;
@@ -2249,7 +2271,7 @@ body.modal-open .mm-slideout {
 }
 .contact_us_page .contact_us_form button:hover {
   background-color: #fff;
-  color: #F84242;
+  color: #f84242;
 }
 
 /* ================================================================ */
