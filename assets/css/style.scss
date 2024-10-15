@@ -1203,6 +1203,16 @@ body.modal-open .mm-slideout {
       }
     }
   }
+  .otp_box {
+    width: calc(70% / 4) !important;
+    margin: 0 10px;
+    .form-control {
+      height: 100px;
+      text-align: center;
+      padding: 0;
+      font-size: 2rem;
+    }
+  }
 }
 
 /* ================================================================ */
@@ -1436,8 +1446,8 @@ body.modal-open .mm-slideout {
       -webkit-appearance: none;
       appearance: none;
       /* creating a custom design */
-      height: 24px;
-      width: 24px;
+      height: 17px;
+      width: 17px;
       background-color: #f84242;
       border-radius: 50%;
       z-index: 999;
@@ -1753,7 +1763,7 @@ body.modal-open .mm-slideout {
       border: 2px solid #d5d5d5;
       display: inline-block;
     }
-    .siz{
+    .siz {
       width: unset;
       width: fit-content;
       height: auto;
@@ -1761,7 +1771,7 @@ body.modal-open .mm-slideout {
       text-align: center;
       padding: 1px 7px;
       border: 1px solid #d5d5d5;
-      font-size: .7rem;
+      font-size: 0.7rem;
       font-weight: bold;
       margin-right: 20px;
     }
@@ -2792,6 +2802,9 @@ body.modal-open .mm-slideout {
   }
   .form_style label {
     font-size: 1.2rem;
+  }
+  .form_style .otp_box .form-control {
+    height: 80px;
   }
 }
 

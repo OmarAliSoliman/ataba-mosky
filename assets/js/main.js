@@ -1,5 +1,7 @@
 // var layeranimation = gsap.timeline();
 $(document).ready(function () {
+  var currentDir = $("body").css("direction");
+
   if ($(".custom_select").length) {
     $(".custom_select").niceSelect();
   }
@@ -19,6 +21,7 @@ $(document).ready(function () {
       autoplay: true,
       nextArrow: $(".custom_category_arrow .next"),
       prevArrow: $(".custom_category_arrow .prev"),
+      rtl: currentDir == "rtl" ? true:false,
       responsive: [
         {
           breakpoint: 1920,
@@ -76,6 +79,7 @@ $(document).ready(function () {
       autoplay: true,
       nextArrow: $(".custom_category_arrow1 .next"),
       prevArrow: $(".custom_category_arrow1 .prev"),
+      rtl: currentDir == "rtl" ? true:false,
       responsive: [
         {
           breakpoint: 1920,
@@ -138,6 +142,7 @@ $(document).ready(function () {
       autoplay: true,
       nextArrow: $(".custom_category_arrow2 .next"),
       prevArrow: $(".custom_category_arrow2 .prev"),
+      rtl: currentDir == "rtl" ? true:false,
       responsive: [
         {
           breakpoint: 1920,
@@ -199,6 +204,7 @@ $(document).ready(function () {
       autoplaySpeed: 5000,
       centerMode: false,
       autoplay: true,
+      rtl: currentDir == "rtl" ? true:false,
       // nextArrow: $(".custom_category_arrow .next"),
       // prevArrow: $(".custom_category_arrow .prev"),
       responsive: [
@@ -245,12 +251,14 @@ $(document).ready(function () {
   if ($(".product_details_pictures").length) {
     $(".big_slider").slick({
       asNavFor: ".small_slider",
+      rtl: currentDir == "rtl" ? true:false,
     });
     $(".small_slider").slick({
       asNavFor: ".big_slider",
       slidesToShow: 5,
       slidesToScroll: 1,
       focusOnSelect: true,
+      rtl: currentDir == "rtl" ? true:false,
     });
   }
 
