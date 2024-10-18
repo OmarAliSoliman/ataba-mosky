@@ -26,11 +26,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css"
     integrity="sha512-nNatP1G6CEh43irXY/GN4cDcLRX/R0jAYAV/ulFZcotSXcuIQE5Do4TuDOYNAD2SCIpmIbaYSllyjTysSCkpEw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/nouislider@15.5.0/dist/nouislider.min.css" rel="stylesheet">
   <!-- for animation -->
   <link rel="stylesheet" href="./assets/css/aos.css">
   <!-- for english version please change style to ar style ./assets/css/style-ar.css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Home</title>
+  <style>
+    .noUi-connect {
+      background-color: #010d77 !important;
+    }
+
+    .noUi-horizontal {
+      height: 10px !important;
+    }
+
+    .noUi-horizontal .noUi-handle {
+      width: 20px;
+      height: 20px !important;
+      right: 0;
+      top: 1;
+      /* transform: translate(0, -50%); */
+      border-radius: 45%;
+      background-color: #f84242;
+      box-shadow: none;
+    }
+    .noUi-horizontal .noUi-handle-lower{
+      /* left: 0; */
+      right: -10px;
+    }
+
+    .noUi-handle:after,
+    .noUi-handle:before {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -578,16 +608,20 @@
                 <div id="collapseOne4" class="accordion-collapse collapse show" data-bs-parent="#accordionExample4">
                   <div class="accordion-body">
                     <div class="select_category_card_wrapper">
+                      <!-- Range Slider -->
                       <div class="form-group">
-                        <input type="text" name="" placeholder="search" id="" class="form-control">
+                        <div id="priceRangeSlider" class="w-100"></div>
                       </div>
-                      <div class="form-group">
-                        <input type="range" name="" min="0" max="1000" value="0" placeholder="search" id=""
-                          class="w-100 mt-4">
-                        <div class="numbers d-flex align-items-center justify-content-between">
-                          <span>10</span>
-                          <span>100000</span>
-                        </div>
+
+                      <!-- Display selected price range -->
+                      <div class="numbers d-flex align-items-center justify-content-between mt-3">
+                        <span>Min: <span id="minPriceDisplay">10</span></span>
+                        <span>Max: <span id="maxPriceDisplay">10000</span></span>
+                      </div>
+
+                      <!-- "Go" Button to apply price filter -->
+                      <div class="d-flex justify-content-end mt-3">
+                        <button type="button" id="applyPriceFilter" class="btn btn-primary">Go</button>
                       </div>
                     </div>
                   </div>
@@ -963,127 +997,127 @@
     </div>
   </div>
 
-    <!-- cart_modal -->
-    <div class="your_cart_modal">
-      <form action="">
-        <div class="head d-flex align-items-center justify-content-between">
-          <h5>YOUR CART</h5>
-          <button type="button"><img src="./assets/images/cancel.svg" alt=""></button>
-        </div>
-        <div class="items_in_cart">
-  
-          <div class="title_strip">
-            <div class="row">
-              <div class="col-sm-12 col-md-6 col-lg-6">
-                <h5 class="first">Item</h5>
-              </div>
-              <div class="col-sm-12 col-md-2 col-lg-2">
-                <h5>Price</h5>
-              </div>
-              <div class="col-sm-12 col-md-2 col-lg-2">
-                <h5>Qty</h5>
-              </div>
-              <div class="col-sm-12 col-md-2 col-lg-2">
-                <h5>Subtotal</h5>
-              </div>
+  <!-- cart_modal -->
+  <div class="your_cart_modal">
+    <form action="">
+      <div class="head d-flex align-items-center justify-content-between">
+        <h5>YOUR CART</h5>
+        <button type="button"><img src="./assets/images/cancel.svg" alt=""></button>
+      </div>
+      <div class="items_in_cart">
+
+        <div class="title_strip">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <h5 class="first">Item</h5>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2">
+              <h5>Price</h5>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2">
+              <h5>Qty</h5>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2">
+              <h5>Subtotal</h5>
             </div>
           </div>
-  
-          <div class="cart_item">
-            <div class="row align-items-center">
-              <div class="col-sm-12 col-md-6 col-lg-6">
-                <div class="cart_icon">
-                  <img src="./assets/images/pr-1.png" alt="">
-                  <div class="card_body">
-                    <h5>Zahran / Stainless Steel</h5>
-                    <div class="option">
-                      <a href="">Remove</a>
-                      <a href="">Move to Wishlist</a>
-                    </div>
+        </div>
+
+        <div class="cart_item">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="cart_icon">
+                <img src="./assets/images/pr-1.png" alt="">
+                <div class="card_body">
+                  <h5>Zahran / Stainless Steel</h5>
+                  <div class="option">
+                    <a href="">Remove</a>
+                    <a href="">Move to Wishlist</a>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-2 col-lg-2">
-                <div class="cart_price">
-                  <h4>235 EGP</h4>
-                </div>
-              </div>
-              <div class="col-6 col-md-2 col-lg-2">
-                <div class="increase_decrease d-flex align-items-center">
-                  <button class="button_minus"><i class="fas fa-minus"></i></button>
-                  <input type="text" value="1">
-                  <button class="button_blus"><i class="fas fa-plus"></i></button>
-                </div>
-              </div>
-              <div class="col-6 col-md-2 col-lg-2">
-                <div class="cart_total">
-                  <h4>235 EGP</h4>
-                </div>
-              </div>
-  
             </div>
+            <div class="col-sm-12 col-md-2 col-lg-2">
+              <div class="cart_price">
+                <h4>235 EGP</h4>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2">
+              <div class="increase_decrease d-flex align-items-center">
+                <button class="button_minus"><i class="fas fa-minus"></i></button>
+                <input type="text" value="1">
+                <button class="button_blus"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2">
+              <div class="cart_total">
+                <h4>235 EGP</h4>
+              </div>
+            </div>
+
           </div>
-  
-          <div class="cart_item">
-            <div class="row align-items-center">
-              <div class="col-sm-12 col-md-6 col-lg-6">
-                <div class="cart_icon">
-                  <img src="./assets/images/pr-2.png" alt="">
-                  <div class="card_body">
-                    <h5>Zahran / Stainless Steel</h5>
-                    <div class="option">
-                      <a href="">Remove</a>
-                      <a href="">Move to Wishlist</a>
-                    </div>
+        </div>
+
+        <div class="cart_item">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="cart_icon">
+                <img src="./assets/images/pr-2.png" alt="">
+                <div class="card_body">
+                  <h5>Zahran / Stainless Steel</h5>
+                  <div class="option">
+                    <a href="">Remove</a>
+                    <a href="">Move to Wishlist</a>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-2 col-lg-2">
-                <div class="cart_price">
-                  <h4>235 EGP</h4>
-                </div>
-              </div>
-              <div class="col-6 col-md-2 col-lg-2">
-                <div class="increase_decrease d-flex align-items-center">
-                  <button class="button_minus"><i class="fas fa-minus"></i></button>
-                  <input type="text" value="1">
-                  <button class="button_blus"><i class="fas fa-plus"></i></button>
-                </div>
-              </div>
-              <div class="col-6 col-md-2 col-lg-2">
-                <div class="cart_total">
-                  <h4>235 EGP</h4>
-                </div>
-              </div>
-  
             </div>
-          </div>
-  
-          <div class="items_cart_option">
-            <div class="row">
-              <div class="col-sm-12 col-md-6 col-lg-7">
-                <a href="">Save and Continue Shopping</a>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-5">
-                <a href="" class="last">Empty Cart</a>
+            <div class="col-sm-12 col-md-2 col-lg-2">
+              <div class="cart_price">
+                <h4>235 EGP</h4>
               </div>
             </div>
+            <div class="col-6 col-md-2 col-lg-2">
+              <div class="increase_decrease d-flex align-items-center">
+                <button class="button_minus"><i class="fas fa-minus"></i></button>
+                <input type="text" value="1">
+                <button class="button_blus"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2">
+              <div class="cart_total">
+                <h4>235 EGP</h4>
+              </div>
+            </div>
+
           </div>
-  
-          <div class="summery_box">
-            <h5>Summary</h5>
-            <hr>
-            <ul class="list-unstyled">
-              <li><span>Quantity</span><span>2 items</span></li>
-              <li><span>Subtotal</span><span>535 EGP</span></li>
-            </ul>
-          </div>
-          <button class="place_order">Place Order</button>
-  
         </div>
-      </form>
-  
-    </div>
+
+        <div class="items_cart_option">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-7">
+              <a href="">Save and Continue Shopping</a>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-5">
+              <a href="" class="last">Empty Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="summery_box">
+          <h5>Summary</h5>
+          <hr>
+          <ul class="list-unstyled">
+            <li><span>Quantity</span><span>2 items</span></li>
+            <li><span>Subtotal</span><span>535 EGP</span></li>
+          </ul>
+        </div>
+        <button class="place_order">Place Order</button>
+
+      </div>
+    </form>
+
+  </div>
 
   <script src="./assets/js/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
@@ -1097,9 +1131,43 @@
   <script src="./assets/js/aos.js"></script>
   <script src="./assets/js/jquery.mCustomScrollbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.js"
-  integrity="sha512-l2fHTYCLVbhRDc5CZWrkKJ06JWFjG5etNQ4G85PbyRiHP769IiVDmhwI0BYSFOXYJUYRmaq5PvfaxacZm9eqhg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-l2fHTYCLVbhRDc5CZWrkKJ06JWFjG5etNQ4G85PbyRiHP769IiVDmhwI0BYSFOXYJUYRmaq5PvfaxacZm9eqhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.5.0/dist/nouislider.min.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script>
+    var priceRangeSlider = document.getElementById('priceRangeSlider');
+    noUiSlider.create(priceRangeSlider, {
+      start: [10, 10000],  // Initial values
+      connect: true,  // Connect handles with a colored bar
+      range: {
+        'min': 10,
+        'max': 10000
+      },
+      step: 10, // Increment steps
+      format: {
+        to: function (value) {
+          return Math.round(value);
+        },
+        from: function (value) {
+          return Number(value);
+        }
+      }
+    });
+
+    // Get references to the display spans for min and max prices
+    let minPriceDisplay = $('#minPriceDisplay');
+    let maxPriceDisplay = $('#maxPriceDisplay');
+
+    // Update the display values when the slider is moved
+    priceRangeSlider.noUiSlider.on('update', function (values, handle) {
+      if (handle === 0) {
+        minPriceDisplay.text(values[0]);
+      } else {
+        maxPriceDisplay.text(values[1]);
+      }
+    });
+  </script>
 </body>
 
 </html>
