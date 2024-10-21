@@ -248,6 +248,64 @@ $(document).ready(function () {
     });
   }
 
+
+  if ($(".header_offer_slider").length) {
+    $(".header_offer_slider").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      speed: 700,
+      infinite: true,
+      css: "linear",
+      loop: true,
+      autoplaySpeed: 2000,
+      centerMode: false,
+      autoplay: true,
+      // nextArrow: $(".custom_category_arrow .next"),
+      // prevArrow: $(".custom_category_arrow .prev"),
+      rtl: currentDir == "rtl" ? true:false,
+      responsive: [
+        {
+          breakpoint: 1920,
+          settings: {
+            slidesToShow: 1,
+            // centerMode: false,
+          },
+        },
+        {
+          breakpoint: 1150,
+          settings: {
+            slidesToShow: 1,
+            // centerMode: false,
+          },
+        },
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 1,
+            // centerMode: false,
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1,
+            // centerMode: false,
+          },
+        },
+
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            // centerMode: false,
+          },
+        },
+      ],
+    });
+  }
+
   if ($(".product_details_pictures").length) {
     $(".big_slider").slick({
       asNavFor: ".small_slider",
