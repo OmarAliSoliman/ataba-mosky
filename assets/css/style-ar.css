@@ -627,6 +627,19 @@ body.modal-open .mm-slideout {
   width: 90%;
 }
 
+.header_offer .mobile_version {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .header_offer .mobile_version {
+    display: block;
+  }
+  .header_offer .desktop_version {
+    display: none;
+  }
+}
+
 .section_header h5 {
   font-size: 2.2rem;
   font-weight: 700;
@@ -681,16 +694,21 @@ body.modal-open .mm-slideout {
   justify-content: center;
   margin: auto;
   transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
 }
 .category_card .card_icon img {
   transition: all 0.3s ease-in-out;
+}
+
+.category_card:hover .card_icon {
+  border: 2px solid #010d77;
 }
 .category_card h5 {
   color: #010d77;
   font-weight: 700;
   margin-top: 25px;
 }
-.category_card:hover img {
+/* .category_card:hover img {
   filter: brightness(0) invert(1);
 }
 .category_card.first_hover:hover .card_icon {
@@ -713,7 +731,7 @@ body.modal-open .mm-slideout {
 }
 .category_card.seventh_hover:hover .card_icon {
   background-color: #0b1788;
-}
+} */
 
 .offer_section {
   background-color: #f1f2ff;
@@ -751,6 +769,43 @@ body.modal-open .mm-slideout {
 .oppsite_offer_section .offer_img {
   right: unset;
   left: 0;
+}
+
+.header_offer_slider_wrapp {
+  margin-top: 100px;
+}
+.header_offer_slider_wrapp img {
+  border-radius: 10px;
+}
+.header_offer_slider_wrapp .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  list-style-type: none;
+  bottom: -20px;
+}
+.header_offer_slider_wrapp .slick-dots li {
+  margin: 0 5px;
+  width: 15px;
+  height: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.header_offer_slider_wrapp .slick-dots button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  text-indent: -9999px;
+  border: 1px solid #010d77;
+}
+.header_offer_slider_wrapp .slick-dots li.slick-active {
+  width: 30px;
+}
+.header_offer_slider_wrapp .slick-dots li.slick-active button {
+  background-color: #010d77;
 }
 
 /* ================================================================ */
@@ -791,10 +846,14 @@ body.modal-open .mm-slideout {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .product_card .card_icon img {
   width: 85%;
   margin: auto;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .product_card h5 {
   color: #010d77;
@@ -2445,6 +2504,7 @@ body.modal-open .mm-slideout {
   .custom_header .header_content .img img {
     opacity: 0.5;
   }
+  
   .product_card .card_icon img {
     width: 95%;
   }

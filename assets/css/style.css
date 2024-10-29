@@ -688,6 +688,7 @@ body.modal-open .mm-slideout {
   justify-content: center;
   margin: auto;
   transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
 }
 .category_card .card_icon img {
   transition: all 0.3s ease-in-out;
@@ -697,29 +698,8 @@ body.modal-open .mm-slideout {
   font-weight: 700;
   margin-top: 25px;
 }
-.category_card:hover img {
-  filter: brightness(0) invert(1);
-}
-.category_card.first_hover:hover .card_icon {
-  background-color: #afdbff;
-}
-.category_card.second_hover:hover .card_icon {
-  background-color: #92c5f1;
-}
-.category_card.third_hover:hover .card_icon {
-  background-color: #60a9e6;
-}
-.category_card.fourth_hover:hover .card_icon {
-  background-color: #1a8be1;
-}
-.category_card.fifth_hover:hover .card_icon {
-  background-color: #0069c7;
-}
-.category_card.sixth_hover:hover .card_icon {
-  background-color: #094d9c;
-}
-.category_card.seventh_hover:hover .card_icon {
-  background-color: #0b1788;
+.category_card:hover .card_icon {
+  border: 2px solid #010d77;
 }
 
 .offer_section {
@@ -835,10 +815,14 @@ body.modal-open .mm-slideout {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .product_card .card_icon img {
   width: 85%;
   margin: auto;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .product_card h5 {
   color: #010d77;

@@ -747,6 +747,7 @@ body.modal-open .mm-slideout {
     justify-content: center;
     margin: auto;
     transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
     img {
       transition: all 0.3s ease-in-out;
     }
@@ -757,59 +758,60 @@ body.modal-open .mm-slideout {
     margin-top: 25px;
   }
   &:hover {
-    img {
-      filter: brightness(0) invert(1);
+    // filter: brightness(0) invert(1);
+    .card_icon {
+      border: 2px solid $mainColor;
     }
   }
-  &.first_hover {
-    &:hover {
-      .card_icon {
-        background-color: #afdbff;
-      }
-    }
-  }
-  &.second_hover {
-    &:hover {
-      .card_icon {
-        background-color: #92c5f1;
-      }
-    }
-  }
-  &.third_hover {
-    &:hover {
-      .card_icon {
-        background-color: #60a9e6;
-      }
-    }
-  }
-  &.fourth_hover {
-    &:hover {
-      .card_icon {
-        background-color: #1a8be1;
-      }
-    }
-  }
-  &.fifth_hover {
-    &:hover {
-      .card_icon {
-        background-color: #0069c7;
-      }
-    }
-  }
-  &.sixth_hover {
-    &:hover {
-      .card_icon {
-        background-color: #094d9c;
-      }
-    }
-  }
-  &.seventh_hover {
-    &:hover {
-      .card_icon {
-        background-color: #0b1788;
-      }
-    }
-  }
+  // &.first_hover {
+  //   &:hover {
+  //     .card_icon {
+  //       background-color: #afdbff;
+  //     }
+  //   }
+  // }
+  // &.second_hover {
+  //   &:hover {
+  //     .card_icon {
+  //       background-color: #92c5f1;
+  //     }
+  //   }
+  // }
+  // &.third_hover {
+  //   &:hover {
+  //     .card_icon {
+  //       background-color: #60a9e6;
+  //     }
+  //   }
+  // }
+  // &.fourth_hover {
+  //   &:hover {
+  //     .card_icon {
+  //       background-color: #1a8be1;
+  //     }
+  //   }
+  // }
+  // &.fifth_hover {
+  //   &:hover {
+  //     .card_icon {
+  //       background-color: #0069c7;
+  //     }
+  //   }
+  // }
+  // &.sixth_hover {
+  //   &:hover {
+  //     .card_icon {
+  //       background-color: #094d9c;
+  //     }
+  //   }
+  // }
+  // &.seventh_hover {
+  //   &:hover {
+  //     .card_icon {
+  //       background-color: #0b1788;
+  //     }
+  //   }
+  // }
 }
 
 .offer_section {
@@ -874,7 +876,7 @@ body.modal-open .mm-slideout {
       margin: 0 5px;
       width: 15px;
       height: 5px;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     button {
@@ -889,14 +891,14 @@ body.modal-open .mm-slideout {
       border: 1px solid $mainColor;
     }
 
-    li.slick-active{
+    li.slick-active {
       width: 30px;
       button {
         background-color: $mainColor;
-  
+
         // transform: scale(1.8);
       }
-    } 
+    }
   }
 }
 
@@ -951,9 +953,12 @@ body.modal-open .mm-slideout {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     img {
       width: 85%;
       margin: auto;
+      height: 100%;
+      object-fit: contain;
       // position: relative;
     }
   }
