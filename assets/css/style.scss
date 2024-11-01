@@ -557,7 +557,7 @@ body.modal-open .mm-slideout {
                 color: #fff;
               }
               img {
-                filter: brightness(0) invert(1);
+                // filter: brightness(0) invert(1);
               }
             }
           }
@@ -1011,7 +1011,10 @@ body.modal-open .mm-slideout {
     top: 15px;
     left: 15px;
     button {
-      display: block;
+      display: flex;
+      align-items: center;
+      border: 0;
+      justify-content: center;
       background-color: transparent;
       border: 0;
       background-color: #3881ef;
@@ -1033,14 +1036,22 @@ body.modal-open .mm-slideout {
     margin-bottom: 80px;
   }
   li {
-    width: calc(100% / 8);
+    // width: calc(100% / 8);
     // border: 1px solid #000;
-    height: 80px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+    a{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     img {
       width: 90%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 }
@@ -1129,8 +1140,8 @@ body.modal-open .mm-slideout {
         }
       }
       .input-group-text {
-        border-top-left-radius: 14px !important;
-        border-bottom-left-radius: 14px !important;
+        border-top-right-radius: 14px !important;
+        border-bottom-right-radius: 14px !important;
         background-color: #f84242;
         color: #fff;
         font-size: 0.8rem;
@@ -1298,10 +1309,12 @@ body.modal-open .mm-slideout {
   .category_slider_listing {
     .category_card {
       .card_icon {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
         img {
-          width: 50%;
+          width: 100%;
+          object-fit: cover;
         }
       }
     }
