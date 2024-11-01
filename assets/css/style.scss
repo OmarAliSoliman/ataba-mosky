@@ -2733,7 +2733,7 @@ body.modal-open .mm-slideout {
     z-index: -1;
   }
   .our_brnads li {
-    width: 25%;
+    // width: 25%;
   }
   .buynow_paylater .banks {
     justify-content: center !important;
@@ -2751,7 +2751,7 @@ body.modal-open .mm-slideout {
     margin-bottom: 30px;
   }
   .our_brnads li {
-    width: 45%;
+    // width: 45%;
   }
   .copy_right h5,
   .copy_right a {
@@ -2957,4 +2957,55 @@ body.modal-open .mm-slideout {
   border-radius: 5px;
   color: #fff;
   font-family: jannab;
+}
+
+
+@media(max-width: 600px){
+  html{
+    font-size: 12px !important;
+  }
+  .section_header h5{
+    font-size: 1.7rem;
+  }
+  .custom_slick_arrow li{
+    width: 40px;
+    height: 40px;
+  }
+  .category_card .card_icon{
+    width: 75px;
+    height: 75px;
+  }
+  .our_brnads li{
+    a{
+      height: 100px;
+    }
+  }
+  .buynow_paylater .content h5{
+    font-size: 2rem;
+  }
+  .custom_footer .footer_logo img{
+    width: 100px;
+  }
+  .buynow_paylater .bank_card {
+    height: 81px;
+  }
+  .buynow_paylater .content p{
+    font-size: 1.2rem;
+  }
+  .buynow_paylater{
+    margin-top: 0;
+  }
+  .product_details_page .product_details_info h5{
+    font-size: 1.5rem;
+  }
+  .product_details_page .product_details_pictures .big_slider .card_img{
+    height: 295px;
+  }
+  .product_details_page{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .custom_slick_arrow li img{
+    height: 22px;
+  }
 }
