@@ -2959,6 +2959,39 @@ body.modal-open .mm-slideout {
   font-family: jannab;
 }
 
+.pagination_custom{
+  .page-link{
+    margin: 0 5px !important;
+    border-radius: 5px;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-link:focus{
+    outline: 0 !important;
+    box-shadow: unset !important;
+  }
+  .page-item.active{
+    .page-item{
+      &:focus{
+        outline: 0 !important;
+        box-shadow: none !important;
+      }
+    }
+    .page-link{
+      background-color: $mainColor;
+      border-color: $mainColor;
+      color: #fff;
+      &:hover{
+        outline: 0 !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
 
 @media(max-width: 600px){
   html{
@@ -3007,5 +3040,14 @@ body.modal-open .mm-slideout {
   }
   .custom_slick_arrow li img{
     height: 22px;
+  }
+  .pagination_custom .page-link {
+    margin: 0 5px !important;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
