@@ -195,7 +195,7 @@ $(document).ready(function () {
     $(".category_slider_listing").slick({
       slidesToShow: 7,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       dots: false,
       speed: 200,
       infinite: true,
@@ -205,8 +205,8 @@ $(document).ready(function () {
       centerMode: false,
       autoplay: true,
       rtl: currentDir == "rtl" ? true : false,
-      // nextArrow: $(".custom_category_arrow .next"),
-      // prevArrow: $(".custom_category_arrow .prev"),
+      nextArrow: $(".custom_product_tools_arrow .next"),
+      prevArrow: $(".custom_product_tools_arrow .prev"),
       responsive: [
         {
           breakpoint: 1920,
@@ -244,6 +244,13 @@ $(document).ready(function () {
             // centerMode: false,
           },
         },
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 4,
+            // centerMode: false,
+          },
+        }
       ],
     });
   }
@@ -310,7 +317,7 @@ $(document).ready(function () {
       slidesToShow: 6,
       slidesToScroll: 1,
       arrows: true,
-      dots: true,
+      dots: false,
       speed: 700,
       infinite: true,
       css: "linear",
@@ -318,8 +325,8 @@ $(document).ready(function () {
       autoplaySpeed: 2000,
       centerMode: false,
       autoplay: true,
-      // nextArrow: $(".custom_category_arrow .next"),
-      // prevArrow: $(".custom_category_arrow .prev"),
+      nextArrow: $(".custom_our_brnads_arrow .next"),
+      prevArrow: $(".custom_our_brnads_arrow .prev"),
       rtl: currentDir == "rtl" ? true : false,
       responsive: [
         {
@@ -354,7 +361,7 @@ $(document).ready(function () {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             // centerMode: false,
           },
         },

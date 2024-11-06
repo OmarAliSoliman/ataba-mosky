@@ -2436,13 +2436,13 @@ body.modal-open .mm-slideout {
     flex-direction: column;
   }
   .top_header .contact_info ul {
-    justify-content: center;
+    /* justify-content: center; */
   }
   .lang_social {
-    justify-content: center !important;
+    /* justify-content: center !important; */
   }
   .top_header .contact_info {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   .top_header .contact_info li {
     margin-left: 0;
@@ -2706,8 +2706,8 @@ body.modal-open .mm-slideout {
     font-size: 1.7rem;
   }
   .custom_slick_arrow li {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
   .category_card .card_icon {
     width: 75px;
@@ -2742,7 +2742,7 @@ body.modal-open .mm-slideout {
     padding-bottom: 0;
   }
   .custom_slick_arrow li img {
-    height: 22px;
+    height: 15px;
   }
   .pagination_custom .page-link {
     margin: 0 5px !important;
@@ -2753,4 +2753,81 @@ body.modal-open .mm-slideout {
     align-items: center;
     justify-content: center;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+.product_tools .custom_product_tools_arrow {
+  margin-bottom: 30px;
+}
+.product_tools .custom_product_tools_arrow ul {
+  justify-content: flex-end;
+}
+.product_tools .custom_product_tools_arrow li {
+  width: 50px;
+  height: 50px;
+}
+.product_tools .custom_product_tools_arrow li img {
+  height: 30px;
+}
+
+@media (max-width: 600px) {
+  .contact_li {
+    display: none !important;
+  }
+  .top_header .lang_social .social li {
+    margin: 0 4px;
+  }
+  .top_header .contact_info li {
+    margin-left: 0;
+    margin: 0 6px;
+  }
+  .top_header .lang_social .lang img {
+    width: 12px;
+  }
+  .category_card h5 {
+    font-size: 1rem;
+  }
+  .custom_footer .footer_logo img {
+    margin-bottom: 10px;
+  }
+  .custom_footer .footer_links h5 {
+    font-size: 1rem;
+  }
+  .custom_footer .footer_links a {
+    font-size: 0.9rem;
+  }
+  .custom_footer .subscripe .input-group {
+    height: 40px;
+  }
+  .custom_footer .social_phone {
+    margin-top: 15px !important;
+  }
+  .custom_footer .social_phone ul li {
+    margin: 0 6px;
+  }
+  .custom_footer .social_phone .phone a {
+    font-size: 1rem;
+  }
+  .copy_right h5,
+  .copy_right a {
+    font-size: 0.7rem;
+  }
+  .custom_footer .footer_logo img {
+    width: 80px;
+  }
+  .our_brnads .our_brnads_logos li img {
+    width: 73%;
+  }
+  .product_tools .custom_product_tools_arrow li {
+    width: 35px;
+    height: 35px;
+  }
+  .product_tools .custom_product_tools_arrow li img {
+    height: 15px;
+  }
+  .splach_loading .cart{
+    width: 6.5em;
+  }
+}
+
+
+/*# sourceMappingURL=style.css.map */
