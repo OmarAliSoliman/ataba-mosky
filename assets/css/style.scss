@@ -1035,7 +1035,7 @@ body.modal-open .mm-slideout {
   .section_header {
     margin-bottom: 80px;
   }
-  .our_brnads_logos{
+  .our_brnads_logos {
     li {
       // width: calc(100% / 8);
       // border: 1px solid #000;
@@ -1317,7 +1317,7 @@ body.modal-open .mm-slideout {
 .product_tools {
   .category_slider_listing {
     .category_card {
-      h5{
+      h5 {
         margin-top: 10px;
       }
       .card_icon {
@@ -3142,7 +3142,43 @@ body.modal-open .mm-slideout {
   .splach_loading .cart {
     width: 6.5em;
   }
+
+  .custom_footer {
+    .left_side {
+      margin-bottom: 20px;
+    }
+  }
+
   // .category_card .card_icon{
   //   padding: 14px;
   // }
+}
+
+.invoice_container {
+  padding-top: 150px;
+  .invoice_header {
+    text-align: center;
+    h5 {
+      font-size: 2rem;
+      color: #888;
+    }
+  }
+  .invoice_name_info {
+    margin-top: 15px;
+    li{
+      margin-bottom: 5px;
+      span{
+        font-size: 1.1rem;
+        color: #888;
+      }
+    }
+  }
+  .invoice_table{
+    margin-top: 50px;
+    tr{
+      th, td{
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

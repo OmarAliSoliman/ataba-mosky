@@ -2774,4 +2774,33 @@ body.modal-open .mm-slideout {
   .splach_loading .cart {
     width: 6.5em;
   }
+  .custom_footer .left_side {
+    margin-bottom: 20px;
+  }
+}
+.invoice_container {
+  padding-top: 150px;
+}
+.invoice_container .invoice_header {
+  text-align: center;
+}
+.invoice_container .invoice_header h5 {
+  font-size: 2rem;
+  color: #888;
+}
+.invoice_container .invoice_name_info {
+  margin-top: 15px;
+}
+.invoice_container .invoice_name_info li {
+  margin-bottom: 5px;
+}
+.invoice_container .invoice_name_info li span {
+  font-size: 1.1rem;
+  color: #888;
+}
+.invoice_container .invoice_table {
+  margin-top: 50px;
+}
+.invoice_container .invoice_table tr th, .invoice_container .invoice_table tr td {
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */

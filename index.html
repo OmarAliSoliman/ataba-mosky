@@ -100,7 +100,7 @@
               <li><a href="">Contact Us</a></li>
               <li class="d-flex align-items-center contact_li"><img src="./assets/images/phone.svg" alt=""><a
                   href="tel:0224724291">0224724291</a> <span>-</span> <a href="tel:0224728290">0224728290</a>
-                </li>
+              </li>
             </ul>
           </div>
         </div>
@@ -193,7 +193,7 @@
             <form action="">
               <div class="form-group">
                 <img class="search_icon" src="./assets/images/search.svg" alt="">
-                <input type="text" name="" id="" class="form-control" placeholder="Search for Products">
+                <input type="text" name="" id="" class="form-control" placeholder="Search by name,code,keyword for product">
               </div>
             </form>
           </div>
@@ -383,16 +383,12 @@
               src="./assets/images/50__offer_minicash_17-20app-banner_720x400_ar_2-100.jpg" alt=""></a>
         </div>
         <div class="slider_item">
-          <a class="desktop_version" href=""><img
-              src="./assets/images/xioami-jun2_2368_x_800_ar.jpg" alt=""></a>
-          <a class="mobile_version" href=""><img
-              src="./assets/images/xioami_-2jun_720x400_ar.jpg" alt=""></a>
+          <a class="desktop_version" href=""><img src="./assets/images/xioami-jun2_2368_x_800_ar.jpg" alt=""></a>
+          <a class="mobile_version" href=""><img src="./assets/images/xioami_-2jun_720x400_ar.jpg" alt=""></a>
         </div>
         <div class="slider_item">
-          <a class="desktop_version" href=""><img
-              src="./assets/images/samsung_oct_2368x800_ar.jpg" alt=""></a>
-          <a class="mobile_version" href=""><img
-              src="./assets/images/720x400_ar_samsung_oct.jpg" alt=""></a>
+          <a class="desktop_version" href=""><img src="./assets/images/samsung_oct_2368x800_ar.jpg" alt=""></a>
+          <a class="mobile_version" href=""><img src="./assets/images/720x400_ar_samsung_oct.jpg" alt=""></a>
         </div>
       </div>
     </div>
@@ -518,7 +514,6 @@
   </div>
 
 
-
   <!-- <div class="offer_section oppsite_offer_section">
     <div class="offer_img">
       <div class="card_img" data-aos="fade-up">
@@ -577,7 +572,7 @@
               <i class="fas fa-heart"></i>
             </div>
             <div class="card_icon">
-              <img src="./assets/images/pr-1.png" alt="">
+              <img loading="lazy" data-src="./assets/images/pr-1.png" alt="">
             </div>
             <h5>Zahran / Stainless Steel</h5>
             <div class="pr_footer">
@@ -592,7 +587,7 @@
               <i class="fas fa-heart"></i>
             </div>
             <div class="card_icon">
-              <img src="./assets/images/pr-2.png" alt="">
+              <img loading="lazy" data-src="./assets/images/pr-2.png" alt="">
             </div>
             <h5>Zahran / Stainless Steel</h5>
             <div class="pr_footer">
@@ -608,7 +603,7 @@
               <i class="fas fa-heart"></i>
             </div>
             <div class="card_icon">
-              <img src="./assets/images/pr-3.png" alt="">
+              <img loading="lazy" data-src="./assets/images/pr-3.png" alt="">
             </div>
             <h5>Tempo Rectangular Oven Tray Set</h5>
             <div class="pr_footer">
@@ -624,7 +619,7 @@
               <i class="fas fa-heart"></i>
             </div>
             <div class="card_icon">
-              <img src="./assets/images/pr-4.png" alt="">
+              <img loading="lazy" data-src="./assets/images/pr-4.png" alt="">
             </div>
             <h5>Sonai Deep Fryer 4 Liter 2000 Watt</h5>
             <div class="pr_footer">
@@ -642,7 +637,7 @@
               <i class="fas fa-heart"></i>
             </div>
             <div class="card_icon">
-              <img src="./assets/images/pr-5.png" alt="">
+              <img loading="lazy" data-src="./assets/images/pr-5.png" alt="">
             </div>
             <h5>Tefal / Tempo 8 Piece Cookware Set</h5>
             <div class="pr_footer">
@@ -658,7 +653,7 @@
               <i class="fas fa-heart"></i>
             </div>
             <div class="card_icon">
-              <img src="./assets/images/pr-4.png" alt="">
+              <img loading="lazy" data-src="./assets/images/pr-4.png" alt="">
             </div>
             <h5>Sonai Deep Fryer 4 Liter 2000 Watt</h5>
             <div class="pr_footer">
@@ -983,6 +978,42 @@
     integrity="sha512-l2fHTYCLVbhRDc5CZWrkKJ06JWFjG5etNQ4G85PbyRiHP769IiVDmhwI0BYSFOXYJUYRmaq5PvfaxacZm9eqhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.querySelectorAll('img[data-src]');
+
+      const lazyLoad = () => {
+        images.forEach(img => {
+          img.src = 'https://placehold.co/600x400?text=Loading';
+          if (img.getAttribute('data-src') && img.getBoundingClientRect().top < window.innerHeight) {
+            img.src = img.getAttribute('data-src');
+            img.removeAttribute('data-src'); // Remove data-src to avoid loading again
+          }
+        });
+      };
+
+      // images.forEach(img => {
+      //   // img.src = "";
+      //   console.log(img.src)
+      //   img.src='https://via.placeholder.com/480 480w'; 
+      // });
+
+      // Run lazyLoad initially to load images already in the viewport
+      lazyLoad();
+
+      // Throttle scroll event for lazy loading
+      let lazyLoadThrottle;
+      window.addEventListener('scroll', () => {
+        if (!lazyLoadThrottle) {
+          lazyLoadThrottle = setTimeout(() => {
+
+            lazyLoad();
+            lazyLoadThrottle = null;
+          }, 2000); // Adjust timeout to control frequency
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
