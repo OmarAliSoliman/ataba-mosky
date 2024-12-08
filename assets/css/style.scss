@@ -3168,7 +3168,7 @@ body.modal-open .mm-slideout {
     li{
       margin-bottom: 5px;
       span{
-        font-size: 1.1rem;
+        font-size: .9rem;
         color: #888;
       }
     }
@@ -3178,6 +3178,16 @@ body.modal-open .mm-slideout {
     tr{
       th, td{
         font-size: 1.2rem;
+      }
+    }
+  }
+  .invoice_footer_info{
+    margin-top: 50px;
+    li{
+      margin-bottom: 5px;
+      span{
+        font-size: .8rem;
+        color: #888;
       }
     }
   }

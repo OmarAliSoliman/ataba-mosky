@@ -2795,7 +2795,7 @@ body.modal-open .mm-slideout {
   margin-bottom: 5px;
 }
 .invoice_container .invoice_name_info li span {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #888;
 }
 .invoice_container .invoice_table {
@@ -2803,4 +2803,14 @@ body.modal-open .mm-slideout {
 }
 .invoice_container .invoice_table tr th, .invoice_container .invoice_table tr td {
   font-size: 1.2rem;
+}
+.invoice_container .invoice_footer_info {
+  margin-top: 50px;
+}
+.invoice_container .invoice_footer_info li {
+  margin-bottom: 5px;
+}
+.invoice_container .invoice_footer_info li span {
+  font-size: 0.8rem;
+  color: #888;
 }/*# sourceMappingURL=style.css.map */
