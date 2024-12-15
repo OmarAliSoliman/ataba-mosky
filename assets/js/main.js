@@ -372,14 +372,12 @@ $(document).ready(function () {
   if ($(".product_details_pictures").length) {
     $(".big_slider").slick({
       asNavFor: ".small_slider",
-      rtl: currentDir == "rtl" ? true : false,
     });
     $(".small_slider").slick({
       asNavFor: ".big_slider",
       slidesToShow: 5,
       slidesToScroll: 1,
       focusOnSelect: true,
-      rtl: currentDir == "rtl" ? true : false,
     });
   }
 
