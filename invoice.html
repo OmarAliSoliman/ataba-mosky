@@ -13,31 +13,23 @@
   <meta name="publisher" content="اسواق العتبه والموسكي">
   <meta property="og:title" content="اسواق العتبه والموسكي">
   <meta property="og:description" content="اسواق العتبه والموسكي">
-  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/all.min.css" />
-  <!-- for english version please change bootstrap to en bootstrap ./assets/css/bootstrap.min.css -->
-  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./assets/css/nice-select.css" />
-  <link rel="stylesheet" href="./assets/css/slick.css">
-  <link rel="stylesheet" href="./assets/css/slick-theme.css">
-  <link rel="stylesheet" href="./assets/css/jquery.mCustomScrollbar.css">
-  <!-- for image or video popup -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css"
-    integrity="sha512-nNatP1G6CEh43irXY/GN4cDcLRX/R0jAYAV/ulFZcotSXcuIQE5Do4TuDOYNAD2SCIpmIbaYSllyjTysSCkpEw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- for animation -->
-  <link rel="stylesheet" href="./assets/css/aos.css">
-  <!-- for english version please change style to ar style ./assets/css/style-ar.css -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+
   <title>Home</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
     .invoice_container {
-      padding-top: 150px;
+      padding-top: 80px;
     }
 
     .invoice_container .invoice_header {
       text-align: center;
+    }
+
+    .invoice_container .invoice_header h5,
+    .invoice_container .invoice_header h4 {
+      margin: 0;
+      margin-top: 5px;
     }
 
     .invoice_container .invoice_header h5 {
@@ -46,11 +38,11 @@
     }
 
     .invoice_container .invoice_name_info {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     .invoice_container .invoice_name_info li {
-      margin-bottom: 5px;
+      margin-bottom: 1px;
     }
 
     .invoice_container .invoice_name_info li span {
@@ -64,11 +56,11 @@
 
     .invoice_container .invoice_table tr th,
     .invoice_container .invoice_table tr td {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     .invoice_container .invoice_footer_info {
-      margin-top: 50px;
+      margin-top: 40px;
     }
 
     .invoice_container .invoice_footer_info li {
@@ -79,6 +71,12 @@
       font-size: 0.8rem;
       color: #888;
     }
+
+    @media print {
+      .wrapper{
+        width: 90% !important;
+      }
+    }
   </style>
 </head>
 
@@ -87,15 +85,15 @@
 
   <div class="invoice_container">
     <div class="container">
-      <div class="wrapper col-sm-12 col-md-9 col-lg-7 mx-auto">
+      <div class="wrapper mx-auto" style="width: 60%; margin: auto;">
         <div class="invoice_header">
-          <h5>Invoice Number</h5>
-          <h5>#0024</h5>
+          <h5 style="font-family:Cairo, serif;">Invoice Number</h5>
+          <h5 style="font-family:Cairo, serif;">#0024</h5>
         </div>
         <div class="invoice_name_info">
-          <div class="row">
+          <div class="" style="display: flex; align-items: center; justify-content: space-between; width: 90%;">
             <div class="col-sm-12 col-md-6 col-lg-8">
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" style="padding: 0; margin: 0; list-style: none; font-family:Cairo, serif;">
                 <li><span>Name: </span><span>Ahmed Hassanien</span></li>
                 <li><span>Phone: </span><span>01111427766</span></li>
                 <li><span>Email: </span><span>ahmed@attaba.com</span></li>
@@ -103,7 +101,7 @@
               </ul>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" style="padding: 0; margin: 0; list-style: none; font-family:Cairo, serif;">
                 <li><span>Order Id: </span><span>20524546</span></li>
                 <li><span>Date: </span><span>12/03/2024</span></li>
                 <li><span>Payment method: </span><span>cash on delivery</span></li>
@@ -112,40 +110,40 @@
           </div>
         </div>
         <div class="invoice_table">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">QTY</th>
-                <th scope="col">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Mienta stand fan</td>
-                <td>EGY 200</td>
-                <td>2</td>
-                <td>EGY 400</td>
-              </tr>
-              <tr>
-                <td>Mienta stand fan</td>
-                <td>EGY 200</td>
-                <td>2</td>
-                <td>EGY 400</td>
-              </tr>
-              <tr>
-                <td>Mienta stand fan</td>
-                <td>EGY 200</td>
-                <td>2</td>
-                <td>EGY 400</td>
-              </tr>
-            </tbody>
+          <table class="table" style="width: 100%; border-collapse: collapse; font-family:Cairo, serif;">
+
+            <tr style="text-align: left; border-bottom: 1px solid #eee;">
+              <th style="border-bottom: 1px solid #000; padding: 10px 0;">Description</th>
+              <th style="border-bottom: 1px solid #000; padding: 10px 0;">Price</th>
+              <th style="border-bottom: 1px solid #000; padding: 10px 0;">QTY</th>
+              <th style="border-bottom: 1px solid #000; padding: 10px 0;">Total</th>
+            </tr>
+
+            <tr style="border-bottom: 1px solid #eee;">
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">Mienta stand fan</td>
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">EGY 200</td>
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">2</td>
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">EGY 400</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">Mienta stand fan</td>
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">EGY 200</td>
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">2</td>
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">EGY 400</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">Mienta stand fan</td>
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">EGY 200</td>
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">2</td>
+              <td style="border-bottom: 1px solid #eee; padding: 10px 0;">EGY 400</td>
+            </tr>
+
           </table>
         </div>
-        <div class="invoice_summery col-sm-12 col-md-8 col-lg-6 ms-auto">
+        <div class="invoice_summery" style="width: 70%; margin-left: auto; display: flex;
+            justify-content: end;">
           <div class="invoice_table">
-            <table class="table">
+            <table style="border-collapse: collapse; font-family:Cairo, serif;">
               <!-- <thead>
                 <tr>
                   <th scope="col">Description</th>
@@ -156,22 +154,22 @@
               </thead> -->
               <tbody>
                 <tr>
-                  <td>Total</td>
-                  <td>EGY 2,600</td>
+                  <td style="border-bottom: 1px solid #eee; padding: 5px 0;">Total</td>
+                  <td style="padding-left: 150px; border-bottom: 1px solid #eee;">EGY 2,600</td>
                 </tr>
                 <tr>
-                  <td>Discount</td>
-                  <td>EGY 500</td>
+                  <td style="border-bottom: 1px solid #eee; padding: 5px 0;">Discount</td>
+                  <td style="padding-left: 150px; border-bottom: 1px solid #eee;">EGY 500</td>
                 </tr>
                 <tr>
-                  <td>Delivery Fees</td>
-                  <td>EGY 50</td>
+                  <td style="border-bottom: 1px solid #000; padding: 5px 0;">Delivery Fees</td>
+                  <td style="padding-left: 150px; border-bottom: 1px solid #000;">EGY 50</td>
                 </tr>
               </tbody>
-              <tfoot>
+              <tfoot style="text-align: left;">
                 <tr>
-                  <th scope="col">Subtotal</th>
-                  <th scope="col">EGY 2,150</th>
+                  <th style="padding: 5px 0;" scope="col">Subtotal</th>
+                  <th style="padding-left: 150px;">EGY 2,150</th>
                 </tr>
               </tfoot>
             </table>
@@ -179,15 +177,15 @@
         </div>
 
         <div class="invoice_name_info invoice_footer_info">
-          <div class="row">
+          <div class="row" style="display: flex; align-items: center; justify-content: space-between;">
             <div class="col-sm-12 col-md-6 col-lg-8">
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" style="padding: 0; margin: 0; list-style: none; font-family:Cairo, serif;">
                 <li><span>Note :</span><span>Delivery takes from 2-4 working days</span></li>
                 <li><span>For more information call: </span><span>0111-690-7222 - 0111-690-7555</span></li>
               </ul>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" style="padding: 0; margin: 0; list-style: none;">
                 <li><span>www.atabamosky.com</span></li>
                 <li><span>Tax Number: 271-816-996</span></li>
               </ul>
@@ -204,21 +202,6 @@
 
 
 
-
-  <script src="./assets/js/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
-  <script src="./assets/js/popper.min.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
-  <!-- for animation -->
-  <script src="./assets/js/slick.js"></script>
-  <script src="./assets/js/aos.js"></script>
-  <script src="./assets/js/jquery.mCustomScrollbar.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.js"
-    integrity="sha512-l2fHTYCLVbhRDc5CZWrkKJ06JWFjG5etNQ4G85PbyRiHP769IiVDmhwI0BYSFOXYJUYRmaq5PvfaxacZm9eqhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
